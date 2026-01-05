@@ -149,12 +149,21 @@ def extract_episode_data(element):
             if link_elem:
                 link = link_elem.get('href')
         
-        # Get thumbnail
-        thumbnail = ""
-        img_elem = element.find('img')
-        if img_elem:
-            thumbnail = img_elem.get('src') or img_elem.get('data-src') or ""
-        
+        # Get thumbnail (background-image OR img)
+thumbnail = ""
+
+# 1️⃣ Try background-image from style
+style = element.get("style", "")
+if "background-image" in style:
+    bg_match = re.search(r'url\((["\']?)(.*?)\1\)', style)
+    if bg_match:
+        thumbnail = bg_match.group(2)
+
+# 2️⃣ Fallback: img tag
+if not thumbnail:
+    img_elem = element.find("img")
+    if img_elem:
+        thumbnail = img_elem.get("src") or img_elem.get("data-src") or ""
         # Get clean title without duration/time
         clean_title = title
         if duration and duration in clean_title:

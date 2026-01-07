@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
 HITMaal Video Scraper
-Pagination + Single JSON storage
+- Pagination: /page/{n}/
+- Safe stop on 404
+- Single JSON file: hitmall.json
+- Deduplication by video link
 """
 
 import requests
@@ -16,22 +19,27 @@ from urllib.parse import urljoin
 # CONFIG
 # ==========================
 BASE_URL = "https://hitmaal.com/"
-OUTPUT_FOLDER = "hitmaal_data"
-JSON_FILE = os.path.join(OUTPUT_FOLDER, "hitmaal_all.json")
-
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+JSON_FILE = "hitmall.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
     "Accept-Language": "en-US,en;q=0.9",
 }
 
 # ==========================
-# FETCH PAGE
+# FETCH PAGE (SAFE)
 # ==========================
 def fetch_page(url):
     print(f"📡 Fetching: {url}")
     r = requests.get(url, headers=HEADERS, timeout=30)
+
+    if r.status_code == 404:
+        return None  # stop pagination
+
     r.raise_for_status()
     return r.text
 
@@ -42,6 +50,7 @@ def load_existing_data():
     if os.path.exists(JSON_FILE):
         with open(JSON_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
+
     return {
         "source": BASE_URL,
         "created_at": datetime.now().isoformat(),
@@ -58,17 +67,15 @@ def extract_episodes(html):
     episodes = []
 
     cards = soup.select("a.video")
-    print(f"🔍 Found {len(cards)} video cards")
+    print(f"🔍 Found {len(cards)} videos")
 
     for card in cards:
         title = card.find("h2", class_="vtitle")
         duration = card.find("span", class_="time")
         ago = card.find("span", class_="ago")
 
-        link = card.get("href", "")
-        link = urljoin(BASE_URL, link)
+        link = urljoin(BASE_URL, card.get("href", ""))
 
-        # thumbnail from inline style
         thumbnail = ""
         style = card.get("style", "")
         match = re.search(r'url\((["\']?)(.*?)\1\)', style)
@@ -93,21 +100,30 @@ def scrape_all_pages():
     all_episodes = []
 
     while True:
-        url = BASE_URL if page == 1 else f"{BASE_URL}page/{page}/"
-        html = fetch_page(url)
-        episodes = extract_episodes(html)
+        if page == 1:
+            url = BASE_URL
+        else:
+            url = f"{BASE_URL}page/{page}/"
 
+        html = fetch_page(url)
+        if html is None:
+            print(f"🛑 Page {page} not found. Stopping.")
+            break
+
+        episodes = extract_episodes(html)
         if not episodes:
-            print("🚫 No more pages found. Stopping.")
+            print(f"🛑 No videos on page {page}. Stopping.")
             break
 
         all_episodes.extend(episodes)
+        print(f"✅ Page {page} scraped")
+
         page += 1
 
     return all_episodes
 
 # ==========================
-# SAVE (APPEND) JSON
+# SAVE MERGED JSON
 # ==========================
 def save_merged_data(new_episodes):
     data = load_existing_data()
@@ -125,9 +141,8 @@ def save_merged_data(new_episodes):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Added {added} new episodes")
+    print(f"💾 Added {added} new videos")
     print(f"📦 Total stored: {data['total']}")
-    print(f"💾 JSON file: {JSON_FILE}")
 
 # ==========================
 # MAIN

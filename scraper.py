@@ -6,7 +6,7 @@ import os
 from datetime import datetime
 from urllib.parse import urljoin
 
-BASE_URL = "https://hitmaal.com/"
+BASE_URL = "https://xhamster1.desi/search/natural+big+boobs"
 JSON_FILE = "hitmall.json"
 
 HEADERS = {

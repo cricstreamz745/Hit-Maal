@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-"""
-HITMaal Scraper (FINAL – REAL FIX)
-- Pagination: /page/{n}/
-- Thumbnail fetched from episode page (og:image)
-- Single JSON file: hitmall.json
-- Deduplication
-"""
-
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -24,8 +16,6 @@ HEADERS = {
 }
 
 # --------------------------
-# Fetch page safely
-# --------------------------
 def fetch_page(url):
     r = requests.get(url, headers=HEADERS, timeout=30)
     if r.status_code == 404:
@@ -33,8 +23,6 @@ def fetch_page(url):
     r.raise_for_status()
     return r.text
 
-# --------------------------
-# Load existing JSON
 # --------------------------
 def load_existing():
     if os.path.exists(JSON_FILE):
@@ -49,46 +37,36 @@ def load_existing():
     }
 
 # --------------------------
-# Fetch thumbnail from episode page
-# --------------------------
-def fetch_thumbnail_from_post(url):
-    try:
-        html = fetch_page(url)
-        if not html:
-            return ""
-        soup = BeautifulSoup(html, "html.parser")
-        og = soup.find("meta", property="og:image")
-        return og["content"].strip() if og else ""
-    except Exception:
+def extract_thumbnail(card):
+    style = card.get("style", "")
+    if not style:
         return ""
 
+    style = " ".join(style.split())
+    m = re.search(r'url\((["\']?)(.*?)\1\)', style, re.IGNORECASE)
+    return m.group(2).strip() if m else ""
+
 # --------------------------
-# Extract listing page videos
-# --------------------------
-def extract_listing(html):
+def extract_episodes(html):
     soup = BeautifulSoup(html, "html.parser")
-    cards = soup.select("a.video")
     episodes = []
 
+    cards = soup.select("a.video")
+    print(f"🔍 Found {len(cards)} videos")
+
     for card in cards:
-        title = card.get("title", "").strip()
-        link = urljoin(BASE_URL, card.get("href", "").strip())
-
-        duration = card.find("span", class_="time")
-        ago = card.find("span", class_="ago")
-
         episodes.append({
-            "title": title,
-            "duration": duration.get_text(strip=True) if duration else "",
-            "upload_time": ago.get_text(strip=True) if ago else "",
-            "link": link,
-            "thumbnail": ""  # filled later
+            "title": card.get("title", "").strip(),
+            "duration": card.find("span", class_="time").get_text(strip=True)
+                        if card.find("span", class_="time") else "",
+            "upload_time": card.find("span", class_="ago").get_text(strip=True)
+                        if card.find("span", class_="ago") else "",
+            "link": urljoin(BASE_URL, card.get("href", "")),
+            "thumbnail": extract_thumbnail(card)
         })
 
     return episodes
 
-# --------------------------
-# Pagination scraper
 # --------------------------
 def scrape_all_pages():
     page = 1
@@ -102,29 +80,23 @@ def scrape_all_pages():
         if not html:
             break
 
-        items = extract_listing(html)
+        items = extract_episodes(html)
         if not items:
             break
 
         all_items.extend(items)
-        print(f"✅ Page {page} → {len(items)} videos")
-
         page += 1
 
     return all_items
 
 # --------------------------
-# Save merged JSON
-# --------------------------
-def save_data(new_items):
+def save_data(items):
     data = load_existing()
-    existing_links = {e["link"] for e in data["episodes"]}
+    seen = {e["link"] for e in data["episodes"]}
 
     added = 0
-    for ep in new_items:
-        if ep["link"] not in existing_links:
-            print(f"🖼 Fetching thumbnail → {ep['title']}")
-            ep["thumbnail"] = fetch_thumbnail_from_post(ep["link"])
+    for ep in items:
+        if ep["link"] not in seen:
             data["episodes"].append(ep)
             added += 1
 
@@ -134,15 +106,12 @@ def save_data(new_items):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"💾 Added {added} new videos")
+    print(f"💾 Added {added} new items")
 
-# --------------------------
-# MAIN
 # --------------------------
 def main():
     print("🎬 HITMaal Scraper Started")
     items = scrape_all_pages()
-    print(f"📊 Found {len(items)} total items")
     save_data(items)
     print("✅ DONE")
 

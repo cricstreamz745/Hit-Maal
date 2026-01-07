@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-HITMaal Video Scraper
-- Correct thumbnail scraping from inline background-image
+HITMaal Video Scraper (FINAL)
+- Handles lazy-loaded thumbnails correctly
 - Pagination: /page/{n}/
 - Safe stop on 404
 - Single JSON output: hitmall.json
@@ -61,13 +61,12 @@ def load_existing_data():
     }
 
 # ==========================
-# EXTRACT EPISODES (FIXED)
+# EXTRACT EPISODES (REAL FIX)
 # ==========================
 def extract_episodes(html):
     soup = BeautifulSoup(html, "html.parser")
     episodes = []
 
-    # HITMaal cards
     cards = soup.select("a.video")
     print(f"🔍 Found {len(cards)} videos")
 
@@ -79,16 +78,29 @@ def extract_episodes(html):
 
         link = urljoin(BASE_URL, card.get("href", "").strip())
 
-        # ✅ CORRECT THUMBNAIL EXTRACTION
+        # ==========================
+        # BULLETPROOF THUMBNAIL LOGIC
+        # ==========================
         thumbnail = ""
+
+        # 1️⃣ inline background-image (rare but exists)
         style = card.get("style", "")
-        if "background-image" in style:
-            match = re.search(
-                r'background-image:\s*url\(["\']?(.*?)["\']?\)',
-                style
-            )
-            if match:
-                thumbnail = match.group(1)
+        if style:
+            m = re.search(r'url\(["\']?(.*?)["\']?\)', style)
+            if m:
+                thumbnail = m.group(1)
+
+        # 2️⃣ data-bg (MOST COMMON ON HITMAAL)
+        if not thumbnail:
+            thumbnail = card.get("data-bg", "").strip()
+
+        # 3️⃣ data-src fallback
+        if not thumbnail:
+            thumbnail = card.get("data-src", "").strip()
+
+        # 4️⃣ data-lazy-bg fallback
+        if not thumbnail:
+            thumbnail = card.get("data-lazy-bg", "").strip()
 
         episodes.append({
             "title": title,

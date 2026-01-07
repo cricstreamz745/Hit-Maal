@@ -3,24 +3,34 @@ name: HITMaal Scraper Auto Run
 on:
   schedule:
     - cron: "*/15 * * * *"   # every 15 minutes
-  workflow_dispatch:        # manual run button
+  workflow_dispatch:
+
+permissions:
+  contents: write   # REQUIRED for push
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    concurrency:
+      group: hitmaal-scraper
+      cancel-in-progress: true
 
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: 📦 Install dependencies
         run: |
-          pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: ▶️ Run scraper
@@ -29,8 +39,9 @@ jobs:
 
       - name: 📤 Commit & push JSON output
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add hitmaal_data/*.json hitmaal_data/*.txt
-          git commit -m "Auto update HITMaal data" || echo "No changes to commit"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add hitmaal_data/*.json
+          git diff --cached --quiet || git commit -m "Auto update HITMaal data"
           git push

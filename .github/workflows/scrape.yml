@@ -2,7 +2,7 @@ name: HITMaal Scraper Auto Run
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -23,6 +23,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: 🔄 Sync with remote
+        run: |
+          git pull origin main
+
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
@@ -42,10 +46,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Always sync with remote to avoid rejection
-          git pull --rebase origin main
-
-          # Commit only if file changed
           git add hitmall.json
           git diff --cached --quiet || git commit -m "Auto update HITMaal data"
 

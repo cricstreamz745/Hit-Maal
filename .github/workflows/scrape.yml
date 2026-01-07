@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # REQUIRED for push
+  contents: write
 
 jobs:
   scrape:
@@ -42,6 +42,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add hitmaal_data/*.json
+          # Always sync with remote to avoid rejection
+          git pull --rebase origin main
+
+          # Commit only if file changed
+          git add hitmall.json
           git diff --cached --quiet || git commit -m "Auto update HITMaal data"
-          git push
+
+          git push origin main

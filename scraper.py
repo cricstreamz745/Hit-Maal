@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 HITMaal Video Scraper
+- Correct thumbnail scraping from inline background-image
 - Pagination: /page/{n}/
 - Safe stop on 404
-- Single JSON file: hitmall.json
+- Single JSON output: hitmall.json
 - Deduplication by video link
 """
 
@@ -38,7 +39,7 @@ def fetch_page(url):
     r = requests.get(url, headers=HEADERS, timeout=30)
 
     if r.status_code == 404:
-        return None  # stop pagination
+        return None
 
     r.raise_for_status()
     return r.text
@@ -60,32 +61,39 @@ def load_existing_data():
     }
 
 # ==========================
-# EXTRACT EPISODES
+# EXTRACT EPISODES (FIXED)
 # ==========================
 def extract_episodes(html):
     soup = BeautifulSoup(html, "html.parser")
     episodes = []
 
+    # HITMaal cards
     cards = soup.select("a.video")
     print(f"🔍 Found {len(cards)} videos")
 
     for card in cards:
-        title = card.find("h2", class_="vtitle")
-        duration = card.find("span", class_="time")
-        ago = card.find("span", class_="ago")
+        title = card.get("title", "").strip()
 
-        link = urljoin(BASE_URL, card.get("href", ""))
+        duration_elem = card.find("span", class_="time")
+        ago_elem = card.find("span", class_="ago")
 
+        link = urljoin(BASE_URL, card.get("href", "").strip())
+
+        # ✅ CORRECT THUMBNAIL EXTRACTION
         thumbnail = ""
         style = card.get("style", "")
-        match = re.search(r'url\((["\']?)(.*?)\1\)', style)
-        if match:
-            thumbnail = match.group(2)
+        if "background-image" in style:
+            match = re.search(
+                r'background-image:\s*url\(["\']?(.*?)["\']?\)',
+                style
+            )
+            if match:
+                thumbnail = match.group(1)
 
         episodes.append({
-            "title": title.get_text(strip=True) if title else "Untitled",
-            "duration": duration.get_text(strip=True) if duration else "",
-            "upload_time": ago.get_text(strip=True) if ago else "",
+            "title": title,
+            "duration": duration_elem.get_text(strip=True) if duration_elem else "",
+            "upload_time": ago_elem.get_text(strip=True) if ago_elem else "",
             "link": link,
             "thumbnail": thumbnail
         })
@@ -100,10 +108,7 @@ def scrape_all_pages():
     all_episodes = []
 
     while True:
-        if page == 1:
-            url = BASE_URL
-        else:
-            url = f"{BASE_URL}page/{page}/"
+        url = BASE_URL if page == 1 else f"{BASE_URL}page/{page}/"
 
         html = fetch_page(url)
         if html is None:

@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
-import re
 from datetime import datetime
 from urllib.parse import urljoin
 
@@ -11,11 +10,11 @@ BASE_URL = "https://hitmaal.com/"
 JSON_FILE = "hitmall.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# --------------------------
+# -------------------------------------------------
 def fetch_page(url):
     r = requests.get(url, headers=HEADERS, timeout=30)
     if r.status_code == 404:
@@ -23,7 +22,7 @@ def fetch_page(url):
     r.raise_for_status()
     return r.text
 
-# --------------------------
+# -------------------------------------------------
 def load_existing():
     if os.path.exists(JSON_FILE):
         with open(JSON_FILE, "r", encoding="utf-8") as f:
@@ -36,23 +35,23 @@ def load_existing():
         "episodes": []
     }
 
-# --------------------------
-def extract_thumbnail(card):
-    style = card.get("style", "")
-    if not style:
+# -------------------------------------------------
+def fetch_thumbnail_from_episode(url):
+    try:
+        html = fetch_page(url)
+        if not html:
+            return ""
+        soup = BeautifulSoup(html, "html.parser")
+        og = soup.find("meta", property="og:image")
+        return og["content"].strip() if og else ""
+    except Exception:
         return ""
 
-    style = " ".join(style.split())
-    m = re.search(r'url\((["\']?)(.*?)\1\)', style, re.IGNORECASE)
-    return m.group(2).strip() if m else ""
-
-# --------------------------
-def extract_episodes(html):
+# -------------------------------------------------
+def extract_listing(html):
     soup = BeautifulSoup(html, "html.parser")
-    episodes = []
-
     cards = soup.select("a.video")
-    print(f"🔍 Found {len(cards)} videos")
+    episodes = []
 
     for card in cards:
         episodes.append({
@@ -62,12 +61,12 @@ def extract_episodes(html):
             "upload_time": card.find("span", class_="ago").get_text(strip=True)
                         if card.find("span", class_="ago") else "",
             "link": urljoin(BASE_URL, card.get("href", "")),
-            "thumbnail": extract_thumbnail(card)
+            "thumbnail": ""
         })
 
     return episodes
 
-# --------------------------
+# -------------------------------------------------
 def scrape_all_pages():
     page = 1
     all_items = []
@@ -80,7 +79,7 @@ def scrape_all_pages():
         if not html:
             break
 
-        items = extract_episodes(html)
+        items = extract_listing(html)
         if not items:
             break
 
@@ -89,14 +88,16 @@ def scrape_all_pages():
 
     return all_items
 
-# --------------------------
+# -------------------------------------------------
 def save_data(items):
     data = load_existing()
-    seen = {e["link"] for e in data["episodes"]}
+    existing = {e["link"] for e in data["episodes"]}
 
     added = 0
     for ep in items:
-        if ep["link"] not in seen:
+        if ep["link"] not in existing:
+            print(f"🖼 Fetching thumbnail → {ep['title']}")
+            ep["thumbnail"] = fetch_thumbnail_from_episode(ep["link"])
             data["episodes"].append(ep)
             added += 1
 
@@ -106,9 +107,9 @@ def save_data(items):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"💾 Added {added} new items")
+    print(f"💾 Added {added} new videos")
 
-# --------------------------
+# -------------------------------------------------
 def main():
     print("🎬 HITMaal Scraper Started")
     items = scrape_all_pages()

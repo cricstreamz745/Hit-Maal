@@ -6,7 +6,7 @@ import os
 from datetime import datetime
 from urllib.parse import urljoin
 
-BASE_URL = "https://hotxseries.app/"
+BASE_URL = "https://hmaal.com/"
 JSON_FILE = "hitmall.json"
 
 HEADERS = {

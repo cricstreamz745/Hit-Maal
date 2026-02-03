@@ -2,7 +2,6 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import os
 from datetime import datetime
 from urllib.parse import urljoin
 
@@ -21,19 +20,6 @@ def fetch_page(url):
         return None
     r.raise_for_status()
     return r.text
-
-# -------------------------------------------------
-def load_existing():
-    if os.path.exists(JSON_FILE):
-        with open(JSON_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {
-        "source": BASE_URL,
-        "created_at": datetime.now().isoformat(),
-        "last_updated": None,
-        "total": 0,
-        "episodes": []
-    }
 
 # -------------------------------------------------
 def fetch_thumbnail_from_episode(url):
@@ -90,24 +76,27 @@ def scrape_all_pages():
 
 # -------------------------------------------------
 def save_data(items):
-    data = load_existing()
-    existing = {e["link"] for e in data["episodes"]}
+    print("🧹 Rebuilding JSON with fresh data")
 
-    added = 0
+    data = {
+        "source": BASE_URL,
+        "created_at": datetime.now().isoformat(),
+        "last_updated": datetime.now().isoformat(),
+        "total": 0,
+        "episodes": []
+    }
+
     for ep in items:
-        if ep["link"] not in existing:
-            print(f"🖼 Fetching thumbnail → {ep['title']}")
-            ep["thumbnail"] = fetch_thumbnail_from_episode(ep["link"])
-            data["episodes"].append(ep)
-            added += 1
+        print(f"🖼 Fetching thumbnail → {ep['title']}")
+        ep["thumbnail"] = fetch_thumbnail_from_episode(ep["link"])
+        data["episodes"].append(ep)
 
     data["total"] = len(data["episodes"])
-    data["last_updated"] = datetime.now().isoformat()
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"💾 Added {added} new videos")
+    print(f"💾 Saved {data['total']} videos (FULL REPLACE)")
 
 # -------------------------------------------------
 def main():
@@ -118,4 +107,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

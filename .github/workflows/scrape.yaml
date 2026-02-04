@@ -1,52 +1,40 @@
-name: HITMaal Scraper Auto Run
+name: HITMaal Scraper
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
+  schedule:
+    - cron: "*/30 * * * *"
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
-    concurrency:
-      group: hitmaal-scraper
-      cancel-in-progress: true
-
     steps:
-      - name: 📥 Checkout repository
+      - name: 📥 Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 🔄 Sync with remote
-        run: |
-          git pull origin main
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
 
       - name: 📦 Install dependencies
         run: |
           pip install -r requirements.txt
 
+      - name: 🎭 Install Playwright Chromium
+        run: |
+          python -m playwright install chromium
+
       - name: ▶️ Run scraper
         run: |
           python scraper.py
 
-      - name: 📤 Commit & push JSON output
+      - name: 📤 Commit result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add hitmall.json
-          git diff --cached --quiet || git commit -m "Auto update HITMaal data"
-
-          git push origin main
+          git add *.json
+          git diff --cached --quiet || git commit -m "Auto update HitMaal with playback"
+          git push

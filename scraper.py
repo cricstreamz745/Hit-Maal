@@ -7,32 +7,20 @@ from urllib.parse import urljoin
 
 BASE_URL = "https://hitmaal.com/"
 JSON_FILE = "hitmall.json"
-MAX_ITEMS = 500   # 🔒 HARD LIMIT
+MAX_ITEMS = 500
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "User-Agent": "Mozilla/5.0",
     "Accept-Language": "en-US,en;q=0.9",
 }
 
 # -------------------------------------------------
 def fetch_page(url):
-    r = requests.get(url, headers=HEADERS, timeout=30)
+    r = requests.get(url, headers=HEADERS, timeout=15)
     if r.status_code == 404:
         return None
     r.raise_for_status()
     return r.text
-
-# -------------------------------------------------
-def fetch_thumbnail_from_episode(url):
-    try:
-        html = fetch_page(url)
-        if not html:
-            return ""
-        soup = BeautifulSoup(html, "html.parser")
-        og = soup.find("meta", property="og:image")
-        return og["content"].strip() if og else ""
-    except Exception:
-        return ""
 
 # -------------------------------------------------
 def extract_listing(html):
@@ -48,7 +36,6 @@ def extract_listing(html):
             "upload_time": card.find("span", class_="ago").get_text(strip=True)
                         if card.find("span", class_="ago") else "",
             "link": urljoin(BASE_URL, card.get("href", "")),
-            "thumbnail": ""
         })
 
     return episodes
@@ -56,9 +43,9 @@ def extract_listing(html):
 # -------------------------------------------------
 def scrape_all_pages():
     page = 1
-    all_items = []
+    items = []
 
-    while len(all_items) < MAX_ITEMS:
+    while len(items) < MAX_ITEMS:
         url = BASE_URL if page == 1 else f"{BASE_URL}page/{page}/"
         print(f"📡 Fetching {url}")
 
@@ -66,50 +53,41 @@ def scrape_all_pages():
         if not html:
             break
 
-        items = extract_listing(html)
-        if not items:
+        batch = extract_listing(html)
+        if not batch:
             break
 
-        for item in items:
-            if len(all_items) >= MAX_ITEMS:
+        for ep in batch:
+            if len(items) >= MAX_ITEMS:
                 break
-            all_items.append(item)
+            items.append(ep)
 
         page += 1
 
-    print(f"🛑 Scraping stopped at {len(all_items)} items")
-    return all_items
+    print(f"🛑 Collected {len(items)} items")
+    return items
 
 # -------------------------------------------------
 def save_data(items):
-    print("🧹 Rebuilding JSON with fresh data")
-
     data = {
         "source": BASE_URL,
         "created_at": datetime.now().isoformat(),
         "last_updated": datetime.now().isoformat(),
-        "total": 0,
-        "episodes": []
+        "total": len(items),
+        "episodes": items
     }
-
-    for i, ep in enumerate(items, start=1):
-        print(f"🖼 ({i}/{len(items)}) Fetching thumbnail → {ep['title']}")
-        ep["thumbnail"] = fetch_thumbnail_from_episode(ep["link"])
-        data["episodes"].append(ep)
-
-    data["total"] = len(data["episodes"])
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"💾 Saved {data['total']} videos (LIMITED)")
+    print("💾 JSON fully replaced (NO thumbnails)")
 
 # -------------------------------------------------
 def main():
     print("🎬 HITMaal Scraper Started")
     items = scrape_all_pages()
     save_data(items)
-    print("✅ DONE")
+    print("✅ DONE in seconds")
 
 if __name__ == "__main__":
     main()

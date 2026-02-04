@@ -7,6 +7,7 @@ from urllib.parse import urljoin
 
 BASE_URL = "https://hitmaal.com/"
 JSON_FILE = "hitmall.json"
+MAX_ITEMS = 500   # 🔒 HARD LIMIT
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
@@ -57,7 +58,7 @@ def scrape_all_pages():
     page = 1
     all_items = []
 
-    while True:
+    while len(all_items) < MAX_ITEMS:
         url = BASE_URL if page == 1 else f"{BASE_URL}page/{page}/"
         print(f"📡 Fetching {url}")
 
@@ -69,9 +70,14 @@ def scrape_all_pages():
         if not items:
             break
 
-        all_items.extend(items)
+        for item in items:
+            if len(all_items) >= MAX_ITEMS:
+                break
+            all_items.append(item)
+
         page += 1
 
+    print(f"🛑 Scraping stopped at {len(all_items)} items")
     return all_items
 
 # -------------------------------------------------
@@ -86,8 +92,8 @@ def save_data(items):
         "episodes": []
     }
 
-    for ep in items:
-        print(f"🖼 Fetching thumbnail → {ep['title']}")
+    for i, ep in enumerate(items, start=1):
+        print(f"🖼 ({i}/{len(items)}) Fetching thumbnail → {ep['title']}")
         ep["thumbnail"] = fetch_thumbnail_from_episode(ep["link"])
         data["episodes"].append(ep)
 
@@ -96,7 +102,7 @@ def save_data(items):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"💾 Saved {data['total']} videos (FULL REPLACE)")
+    print(f"💾 Saved {data['total']} videos (LIMITED)")
 
 # -------------------------------------------------
 def main():

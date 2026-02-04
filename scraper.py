@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import json
 from datetime import datetime
 from urllib.parse import urljoin
+import re
 
 BASE_URL = "https://hitmaal.com/"
 JSON_FILE = "hitmall.json"
@@ -23,19 +24,29 @@ def fetch_page(url):
     return r.text
 
 # -------------------------------------------------
+def extract_thumbnail(style):
+    if not style:
+        return ""
+    match = re.search(r'url\((["\']?)(.*?)\1\)', style)
+    return match.group(2) if match else ""
+
+# -------------------------------------------------
 def extract_listing(html):
     soup = BeautifulSoup(html, "html.parser")
     cards = soup.select("a.video")
     episodes = []
 
     for card in cards:
+        title_tag = card.find("h2", class_="vtitle")
+
         episodes.append({
-            "title": card.get("title", "").strip(),
+            "title": title_tag.get_text(strip=True) if title_tag else "",
             "duration": card.find("span", class_="time").get_text(strip=True)
                         if card.find("span", class_="time") else "",
             "upload_time": card.find("span", class_="ago").get_text(strip=True)
                         if card.find("span", class_="ago") else "",
             "link": urljoin(BASE_URL, card.get("href", "")),
+            "thumbnail": extract_thumbnail(card.get("style", ""))
         })
 
     return episodes
@@ -80,7 +91,7 @@ def save_data(items):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print("💾 JSON fully replaced (NO thumbnails)")
+    print("💾 JSON replaced (thumbnail from listing page)")
 
 # -------------------------------------------------
 def main():

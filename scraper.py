@@ -27,13 +27,17 @@ def fetch_page(url):
 def extract_thumbnail(style):
     if not style:
         return ""
-    match = re.search(r'url\((["\']?)(.*?)\1\)', style)
-    return match.group(2) if match else ""
+    # supports: url("..."), url('...'), url(...)
+    match = re.search(r'url\((?:&quot;|"|\')?(.*?)(?:&quot;|"|\')?\)', style)
+    return match.group(1) if match else ""
 
 # -------------------------------------------------
 def extract_listing(html):
     soup = BeautifulSoup(html, "html.parser")
-    cards = soup.select("a.video")
+
+    # IMPORTANT: lazy-bg cards
+    cards = soup.select("a.video.lazy-bg")
+
     episodes = []
 
     for card in cards:
@@ -45,7 +49,7 @@ def extract_listing(html):
                         if card.find("span", class_="time") else "",
             "upload_time": card.find("span", class_="ago").get_text(strip=True)
                         if card.find("span", class_="ago") else "",
-            "link": urljoin(BASE_URL, card.get("href", "")),
+            "link": card.get("href", "").strip(),
             "thumbnail": extract_thumbnail(card.get("style", ""))
         })
 
@@ -91,14 +95,14 @@ def save_data(items):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print("💾 JSON replaced (thumbnail from listing page)")
+    print("💾 JSON replaced successfully")
 
 # -------------------------------------------------
 def main():
     print("🎬 HITMaal Scraper Started")
     items = scrape_all_pages()
     save_data(items)
-    print("✅ DONE in seconds")
+    print("✅ DONE (FAST & SAFE)")
 
 if __name__ == "__main__":
     main()

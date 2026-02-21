@@ -1,279 +1,168 @@
 #!/usr/bin/env python3
-import re
-import json
-import time
-from datetime import datetime
-from urllib.parse import urljoin
+"""
+HITMaal Video Scraper
+- Correct thumbnail scraping from inline background-image
+- Pagination: /page/{n}/
+- Safe stop on 404
+- Single JSON output: hitmall.json
+- Deduplication by video link
+"""
+
 import requests
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+import json
+import os
+import re
+from datetime import datetime
+from urllib.parse import urljoin
 
-# ================== CONFIG ==================
+# ==========================
+# CONFIG
+# ==========================
 BASE_URL = "https://hitmaal.com/"
-MAX_ITEMS = 30
-OUTPUT_JSON = "hitmaal_with_playback.json"
-PAGE_TIMEOUT = 30000
-REQUEST_TIMEOUT = 15
-MAX_RETRIES = 2
+JSON_FILE = "hitmall.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.5",
-    "Accept-Encoding": "gzip, deflate, br",
-    "DNT": "1",
-    "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
 }
 
-M3U8_REGEX = re.compile(r'https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*', re.I)
-MPD_REGEX = re.compile(r'https?://[^\s"\'<>]+\.mpd[^\s"\'<>]*', re.I)
+# ==========================
+# FETCH PAGE (SAFE)
+# ==========================
+def fetch_page(url):
+    print(f"📡 Fetching: {url}")
+    r = requests.get(url, headers=HEADERS, timeout=30)
 
-# ================== HELPERS ==================
-def fetch_page(url, retry=0):
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-        r.raise_for_status()
-        return r.text
-    except requests.RequestException as e:
-        if retry < MAX_RETRIES:
-            time.sleep(2)
-            return fetch_page(url, retry + 1)
-        print(f"Failed to fetch {url}: {e}")
-        return ""
+    if r.status_code == 404:
+        return None
 
-def extract_listing(html):
-    if not html:
-        return []
-    
-    soup = BeautifulSoup(html, "html.parser")
-    cards = soup.select("a.video.lazy-bg, article.video, .video-item")
-    out = []
-    
-    for c in cards:
-        title_elem = c.find("h2", class_="vtitle") or c.find("h3") or c.find("h2")
-        title = title_elem.get_text(strip=True) if title_elem else ""
-        
-        if not title:
-            continue
-            
-        href = c.get("href", "").strip()
-        if not href:
-            continue
-            
-        if not href.startswith('http'):
-            href = urljoin(BASE_URL, href)
-        
-        out.append({
-            "title": title,
-            "page_url": href
-        })
-    
-    return out
+    r.raise_for_status()
+    return r.text
 
-def scrape_listings():
-    page = 1
-    items = []
-    
-    while len(items) < MAX_ITEMS:
-        url = BASE_URL if page == 1 else f"{BASE_URL}page/{page}/"
-        print(f"Scraping page {page}: {url}")
-        
-        html = fetch_page(url)
-        if not html:
-            break
-            
-        batch = extract_listing(html)
-        if not batch:
-            print(f"No more items found on page {page}")
-            break
-            
-        for it in batch:
-            if len(items) >= MAX_ITEMS:
-                break
-            if not any(existing['page_url'] == it['page_url'] for existing in items):
-                items.append(it)
-                
-        print(f"Found {len(batch)} items on page {page}")
-        page += 1
-        time.sleep(1)
-    
-    return items
+# ==========================
+# LOAD EXISTING JSON
+# ==========================
+def load_existing_data():
+    if os.path.exists(JSON_FILE):
+        with open(JSON_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-# ================== PLAYBACK EXTRACT ==================
-def extract_playback(url, browser):
-    found_m3u8, found_mpd = set(), set()
-    context = None
-    page = None
-    
-    try:
-        context = browser.new_context(
-            user_agent=HEADERS["User-Agent"],
-            viewport={"width": 1280, "height": 720},
-            locale="en-US",
-        )
-        page = context.new_page()
-
-        def on_request(req):
-            u = req.url.lower()
-            if ".m3u8" in u:
-                found_m3u8.add(req.url.split("?")[0])
-            if ".mpd" in u or "/dash/" in u or "manifest" in u:
-                found_mpd.add(req.url.split("?")[0])
-
-        def on_response(res):
-            u = res.url.lower()
-            if ".m3u8" in u:
-                found_m3u8.add(res.url.split("?")[0])
-            if ".mpd" in u or "/dash/" in u or "manifest" in u:
-                found_mpd.add(res.url.split("?")[0])
-
-        page.on("request", on_request)
-        page.on("response", on_response)
-
-        try:
-            page.goto(url, wait_until="domcontentloaded", timeout=PAGE_TIMEOUT)
-            page.wait_for_load_state("networkidle", timeout=10000)
-        except PlaywrightTimeoutError:
-            print(f"  Timeout loading {url}, continuing...")
-        
-        play_selectors = [
-            "video",
-            "button[aria-label*='play' i]",
-            "button[class*='play']",
-            ".play-button",
-            ".vjs-big-play-button",
-            "button[title*='Play' i]"
-        ]
-        
-        for selector in play_selectors:
-            try:
-                play_btn = page.locator(selector).first
-                if play_btn.is_visible(timeout=2000):
-                    play_btn.click()
-                    page.wait_for_timeout(3000)
-                    break
-            except Exception:
-                continue
-
-        page.wait_for_timeout(5000)
-
-        html = page.content()
-        for m in M3U8_REGEX.findall(html):
-            found_m3u8.add(m.split("?")[0])
-        for m in MPD_REGEX.findall(html):
-            found_mpd.add(m.split("?")[0])
-
-        media = page.evaluate("""() => {
-            const urls = new Set();
-            document.querySelectorAll('video, source, iframe').forEach(el => {
-                if (el.src) urls.add(el.src);
-                if (el.currentSrc) urls.add(el.currentSrc);
-                if (el.dataset && el.dataset.src) urls.add(el.dataset.src);
-            });
-            return Array.from(urls);
-        }""")
-        
-        for u in media:
-            u_lower = u.lower()
-            if ".m3u8" in u_lower:
-                found_m3u8.add(u.split("?")[0])
-            if ".mpd" in u_lower or "/dash/" in u_lower:
-                found_mpd.add(u.split("?")[0])
-
-    except Exception as e:
-        print(f"  Error extracting playback: {str(e)[:100]}")
-    finally:
-        if page:
-            page.close()
-        if context:
-            context.close()
-
-    playback = {}
-    if found_m3u8:
-        playback["hls"] = sorted(found_m3u8)[:3]
-    if found_mpd:
-        playback["dash"] = sorted(found_mpd)[:3]
-    
-    return playback if playback else None
-
-# ================== MAIN ==================
-def main():
-    print(f"Starting scraper for {BASE_URL}")
-    start_time = time.time()
-    
-    listings = scrape_listings()
-    print(f"Found {len(listings)} videos")
-    
-    if not listings:
-        print("No listings found, exiting")
-        return
-    
-    results = {
+    return {
         "source": BASE_URL,
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "total": len(listings),
-        "videos": []
+        "created_at": datetime.now().isoformat(),
+        "last_updated": None,
+        "total": 0,
+        "episodes": []
     }
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                "--no-sandbox",
-                "--disable-setuid-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu",
-                "--disable-web-security",
-                "--disable-features=IsolateOrigins,site-per-process",
-            ],
-        )
+# ==========================
+# EXTRACT EPISODES (FIXED)
+# ==========================
+def extract_episodes(html):
+    soup = BeautifulSoup(html, "html.parser")
+    episodes = []
 
-        successful = 0
-        for i, v in enumerate(listings, 1):
-            print(f"\n[{i}/{len(listings)}] Processing: {v['title'][:50]}...")
-            
-            try:
-                playback = extract_playback(v["page_url"], browser)
-                results["videos"].append({
-                    "title": v["title"],
-                    "page_url": v["page_url"],
-                    "playback": playback
-                })
-                if playback:
-                    successful += 1
-                    print(f"  ✓ Found playback: {list(playback.keys())}")
-                else:
-                    print(f"  ✗ No playback found")
-            except Exception as e:
-                print(f"  ✗ Error: {str(e)[:100]}")
-                results["videos"].append({
-                    "title": v["title"],
-                    "page_url": v["page_url"],
-                    "playback": None,
-                    "error": str(e)[:200]
-                })
-            
-            elapsed = time.time() - start_time
-            avg_time = elapsed / i
-            remaining = avg_time * (len(listings) - i)
-            print(f"  Progress: {i}/{len(listings)} | Found: {successful} | "
-                  f"Elapsed: {elapsed:.0f}s | Remaining: {remaining:.0f}s")
+    # HITMaal cards
+    cards = soup.select("a.video")
+    print(f"🔍 Found {len(cards)} videos")
 
-        browser.close()
+    for card in cards:
+        title = card.get("title", "").strip()
 
-    results["stats"] = {
-        "successful": successful,
-        "failed": len(listings) - successful,
-        "execution_time_seconds": round(time.time() - start_time, 2)
-    }
-    
-    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-    
-    print(f"\n✅ Done! Saved to {OUTPUT_JSON}")
-    print(f"   Successful: {successful}/{len(listings)}")
-    print(f"   Time taken: {results['stats']['execution_time_seconds']}s")
+        duration_elem = card.find("span", class_="time")
+        ago_elem = card.find("span", class_="ago")
 
+        link = urljoin(BASE_URL, card.get("href", "").strip())
+
+        # ✅ CORRECT THUMBNAIL EXTRACTION
+        thumbnail = ""
+        style = card.get("style", "")
+        if "background-image" in style:
+            match = re.search(
+                r'background-image:\s*url\(["\']?(.*?)["\']?\)',
+                style
+            )
+            if match:
+                thumbnail = match.group(1)
+
+        episodes.append({
+            "title": title,
+            "duration": duration_elem.get_text(strip=True) if duration_elem else "",
+            "upload_time": ago_elem.get_text(strip=True) if ago_elem else "",
+            "link": link,
+            "thumbnail": thumbnail
+        })
+
+    return episodes
+
+# ==========================
+# PAGINATION SCRAPER
+# ==========================
+def scrape_all_pages():
+    page = 1
+    all_episodes = []
+
+    while True:
+        url = BASE_URL if page == 1 else f"{BASE_URL}page/{page}/"
+
+        html = fetch_page(url)
+        if html is None:
+            print(f"🛑 Page {page} not found. Stopping.")
+            break
+
+        episodes = extract_episodes(html)
+        if not episodes:
+            print(f"🛑 No videos on page {page}. Stopping.")
+            break
+
+        all_episodes.extend(episodes)
+        print(f"✅ Page {page} scraped")
+
+        page += 1
+
+    return all_episodes
+
+# ==========================
+# SAVE MERGED JSON
+# ==========================
+def save_merged_data(new_episodes):
+    data = load_existing_data()
+    existing_links = {ep["link"] for ep in data["episodes"]}
+
+    added = 0
+    for ep in new_episodes:
+        if ep["link"] not in existing_links:
+            data["episodes"].append(ep)
+            added += 1
+
+    data["total"] = len(data["episodes"])
+    data["last_updated"] = datetime.now().isoformat()
+
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    print(f"💾 Added {added} new videos")
+    print(f"📦 Total stored: {data['total']}")
+
+# ==========================
+# MAIN
+# ==========================
+def main():
+    print("🎬 HITMaal Scraper Started")
+    print("=" * 50)
+
+    episodes = scrape_all_pages()
+    print(f"\n📊 Total scraped this run: {len(episodes)}")
+
+    save_merged_data(episodes)
+
+    print("\n✅ DONE")
+
+# ==========================
 if __name__ == "__main__":
     main()

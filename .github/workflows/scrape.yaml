@@ -1,40 +1,52 @@
-name: HitMaal Scraper
+name: HITMaal Scraper Auto Run
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"   # runs every 6 hours (optional)
+    - cron: "*/15 * * * *"   # every 15 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    concurrency:
+      group: hitmaal-scraper
+      cancel-in-progress: true
 
     steps:
-      - name: 📥 Checkout Repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 playwright
+          pip install -r requirements.txt
 
-      - name: 🎭 Install Playwright Browsers
-        run: |
-          playwright install --with-deps chromium
-
-      - name: 🚀 Run Scraper
+      - name: ▶️ Run scraper
         run: |
           python scraper.py
 
-      - name: 💾 Commit JSON Output
+      - name: 📤 Commit & push JSON output
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add hitmaal_with_playback.json
-          git commit -m "Auto update scraper output" || echo "No changes"
-          git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Always sync with remote to avoid rejection
+          git pull --rebase origin main
+
+          # Commit only if file changed
+          git add hitmall.json
+          git diff --cached --quiet || git commit -m "Auto update HITMaal data"
+
+          git push origin main

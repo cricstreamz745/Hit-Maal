@@ -1,52 +1,34 @@
-name: HITMaal Scraper Auto Run
+name: HITMaal Auto Scraper
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes
+    - cron: "0 */6 * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    concurrency:
-      group: hitmaal-scraper
-      cancel-in-progress: true
 
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: 🐍 Setup Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install requests beautifulsoup4
 
-      - name: ▶️ Run scraper
-        run: |
-          python scraper.py
+      - name: Run scraper
+        run: python scraper.py
 
-      - name: 📤 Commit & push JSON output
+      - name: Commit and Push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Always sync with remote to avoid rejection
-          git pull --rebase origin main
-
-          # Commit only if file changed
           git add hitmall.json
-          git diff --cached --quiet || git commit -m "Auto update HITMaal data"
-
-          git push origin main
+          git diff --cached --quiet || git commit -m "Auto update hitmall.json"
+          git push

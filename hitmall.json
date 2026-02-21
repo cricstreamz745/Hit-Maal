@@ -1,8 +1,8 @@
 {
   "source": "https://hitmaal.com/",
   "created_at": "2026-02-04T18:36:10.219580",
-  "last_updated": "2026-02-21T13:03:20.160711",
-  "total": 3092,
+  "last_updated": "2026-02-21T18:46:33.819844",
+  "total": 3094,
   "episodes": [
     {
       "title": "Teacher Digi Movieplex Episode 2",
@@ -21646,6 +21646,20 @@
       "duration": "35:00",
       "upload_time": "5 Hr Ago",
       "link": "https://hitmaal.net/gharwali-episode-3/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Shraap Episode 1",
+      "duration": "44:00",
+      "upload_time": "47 Mnutes Ago",
+      "link": "https://hitmaal.net/shraap-episode-1/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Shraap Episode 3",
+      "duration": "31:00",
+      "upload_time": "3 Hr Ago",
+      "link": "https://hitmaal.net/shraap-episode-3/",
       "thumbnail": ""
     }
   ]

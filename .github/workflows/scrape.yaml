@@ -21,20 +21,24 @@ jobs:
 
       - name: 📦 Install dependencies
         run: |
-          pip install -r requirements.txt
-
-      - name: 🎭 Install Playwright Chromium
-        run: |
-          python -m playwright install chromium
+          pip install requests beautifulsoup4
 
       - name: ▶️ Run scraper
         run: |
           python scraper.py
 
-      - name: 📤 Commit result
+      - name: 📤 Commit and push results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add *.json
-          git diff --cached --quiet || git commit -m "Auto update HitMaal with playback"
-          git push
+          
+          # Add all files in the hitmaal_data folder
+          git add hitmaal_data/
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Auto-update HITMaal data $(date +'%Y-%m-%d %H:%M')"
+            git push
+          fi

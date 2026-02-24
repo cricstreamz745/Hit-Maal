@@ -1,8 +1,8 @@
 {
   "source": "https://hitmaal.com/",
   "created_at": "2026-02-04T18:36:10.219580",
-  "last_updated": "2026-02-23T19:14:45.715887",
-  "total": 3118,
+  "last_updated": "2026-02-24T02:44:53.136667",
+  "total": 3123,
   "episodes": [
     {
       "title": "Teacher Digi Movieplex Episode 2",
@@ -21828,6 +21828,41 @@
       "duration": "18:00",
       "upload_time": "6 Hr Ago",
       "link": "https://hitmaal.net/aao-kabhi-haveli-pe-episode-1/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Aarzoo Episode 4",
+      "duration": "20:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hitmaal.net/aarzoo-episode-4/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Achamka",
+      "duration": "12:00",
+      "upload_time": "3 Hr Ago",
+      "link": "https://hitmaal.net/achamka/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Aarzoo Episode 5",
+      "duration": "22:00",
+      "upload_time": "4 Hr Ago",
+      "link": "https://hitmaal.net/aarzoo-episode-5/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Adhuri Aas Episode 5",
+      "duration": "42:00",
+      "upload_time": "6 Hr Ago",
+      "link": "https://hitmaal.net/adhuri-aas-episode-5/",
+      "thumbnail": ""
+    },
+    {
+      "title": "Adhuri Aas Episode 2",
+      "duration": "24:00",
+      "upload_time": "6 Hr Ago",
+      "link": "https://hitmaal.net/adhuri-aas-episode-2/",
       "thumbnail": ""
     }
   ]

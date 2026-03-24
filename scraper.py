@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """
-HITMaal Video Scraper
-- Correct thumbnail scraping from inline background-image
-- Pagination: /page/{n}/
-- Safe stop on 404
-- Single JSON output: hitmall.json
-- Deduplication by video link
+HITMaal Video Scraper (Fresh Mode)
+- Always overwrite JSON with latest scraped data
+- Pagination supported
+- Stops safely on 404
 """
 
 import requests
 from bs4 import BeautifulSoup
 import json
-import os
 import re
 from datetime import datetime
 from urllib.parse import urljoin
@@ -28,7 +25,6 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/120.0.0.0 Safari/537.36"
     ),
-    "Accept-Language": "en-US,en;q=0.9",
 }
 
 # ==========================
@@ -43,24 +39,8 @@ def fetch_page(url):
         r.raise_for_status()
         return r.text
     except requests.RequestException as e:
-        print(f"Request error: {e}")
+        print(f"Error: {e}")
         return None
-
-# ==========================
-# LOAD EXISTING JSON
-# ==========================
-def load_existing_data():
-    if os.path.exists(JSON_FILE):
-        with open(JSON_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    return {
-        "source": BASE_URL,
-        "created_at": datetime.now().isoformat(),
-        "last_updated": None,
-        "total": 0,
-        "episodes": []
-    }
 
 # ==========================
 # EXTRACT EPISODES
@@ -75,23 +55,28 @@ def extract_episodes(html):
         title = card.get("title", "").strip()
         link = urljoin(BASE_URL, card.get("href", "").strip())
 
-        duration_elem = card.find("span", class_="time")
-        ago_elem = card.find("span", class_="ago")
-
+        duration = ""
+        upload_time = ""
         thumbnail = ""
+
+        duration_elem = card.find("span", class_="time")
+        if duration_elem:
+            duration = duration_elem.get_text(strip=True)
+
+        ago_elem = card.find("span", class_="ago")
+        if ago_elem:
+            upload_time = ago_elem.get_text(strip=True)
+
+        # Extract thumbnail from inline style
         style = card.get("style", "")
-        if "background-image" in style:
-            match = re.search(
-                r'background-image:\s*url\(["\']?(.*?)["\']?\)',
-                style
-            )
-            if match:
-                thumbnail = match.group(1)
+        match = re.search(r'url\(["\']?(.*?)["\']?\)', style)
+        if match:
+            thumbnail = match.group(1)
 
         episodes.append({
             "title": title,
-            "duration": duration_elem.get_text(strip=True) if duration_elem else "",
-            "upload_time": ago_elem.get_text(strip=True) if ago_elem else "",
+            "duration": duration,
+            "upload_time": upload_time,
             "link": link,
             "thumbnail": thumbnail
         })
@@ -110,48 +95,51 @@ def scrape_all_pages():
         html = fetch_page(url)
 
         if html is None:
+            print("Stopping (404 or error)")
             break
 
         episodes = extract_episodes(html)
 
         if not episodes:
+            print("No more videos found")
             break
 
+        print(f"Page {page}: {len(episodes)} videos")
         all_episodes.extend(episodes)
+
         page += 1
 
     return all_episodes
 
 # ==========================
-# SAVE MERGED JSON
+# SAVE (OVERWRITE JSON)
 # ==========================
-def save_merged_data(new_episodes):
-    data = load_existing_data()
-    existing_links = {ep["link"] for ep in data["episodes"]}
-
-    for ep in new_episodes:
-        if ep["link"] not in existing_links:
-            data["episodes"].append(ep)
-
-    data["total"] = len(data["episodes"])
-    data["last_updated"] = datetime.now().isoformat()
+def save_data(episodes):
+    data = {
+        "source": BASE_URL,
+        "created_at": datetime.now().isoformat(),
+        "total": len(episodes),
+        "episodes": episodes
+    }
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+    print(f"Saved {len(episodes)} latest videos")
 
 # ==========================
 # MAIN
 # ==========================
 def main():
-    print("HITMaal Scraper Started")
+    print("🔥 HITMaal Scraper (Fresh Mode)")
     print("=" * 40)
 
     episodes = scrape_all_pages()
-    print(f"Total scraped this run: {len(episodes)}")
+    print(f"Total scraped: {len(episodes)}")
 
-    save_merged_data(episodes)
+    save_data(episodes)
 
-    print("DONE")
+    print("✅ DONE (Old JSON replaced)")
 
 # ==========================
 if __name__ == "__main__":

@@ -16,7 +16,7 @@ from urllib.parse import urljoin
 # ==========================
 # CONFIG
 # ==========================
-BASE_URL = "https://hiwebxseries.com.co/"
+BASE_URL = "https://hmaal.net/"
 JSON_FILE = "hitmall.json"
 
 HEADERS = {

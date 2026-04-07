@@ -1,152 +1,180 @@
 {
   "source": "https://hmaal.net/ott/ullu/",
-  "created_at": "2026-04-07T07:41:21.058536",
-  "total": 323,
+  "created_at": "2026-04-07T13:45:22.127373",
+  "total": 325,
   "episodes": [
+    {
+      "title": "Malti Episode 1",
+      "duration": "20:00",
+      "upload_time": "17 seconds Ago",
+      "link": "https://hmaal.net/malti-episode-1/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Malti-Part-1-E1.webp"
+    },
+    {
+      "title": "Dance Bar Episode 2",
+      "duration": "17:00",
+      "upload_time": "19 Mnutes Ago",
+      "link": "https://hmaal.net/dance-bar-episode-2/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Dance-Bar-Episode-2.webp"
+    },
+    {
+      "title": "Malti Episode 5",
+      "duration": "22:00",
+      "upload_time": "3 Hr Ago",
+      "link": "https://hmaal.net/malti-episode-5/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Malti-E5.webp"
+    },
+    {
+      "title": "Malti Episode 3",
+      "duration": "27:00",
+      "upload_time": "5 Hr Ago",
+      "link": "https://hmaal.net/malti-episode-3/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Malti-Part-1-E3.webp"
+    },
     {
       "title": "Taras Episode 3",
       "duration": "21:00",
-      "upload_time": "5 Mnutes Ago",
+      "upload_time": "7 Hr Ago",
       "link": "https://hmaal.net/taras-episode-3/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Taras-E3.webp"
     },
     {
       "title": "Ek Deewana Tha Episode 1",
       "duration": "17:00",
-      "upload_time": "1 Hr Ago",
+      "upload_time": "8 Hr Ago",
       "link": "https://hmaal.net/ek-deewana-tha-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Ek-Deewana-Tha-E1.webp"
     },
     {
       "title": "Jalebi Bai Episode 10",
       "duration": "18:00",
-      "upload_time": "2 Hr Ago",
+      "upload_time": "9 Hr Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-10/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-10-1.webp"
     },
     {
       "title": "Ek Deewana Tha Episode 2",
       "duration": "27:00",
-      "upload_time": "3 Hr Ago",
+      "upload_time": "9 Hr Ago",
       "link": "https://hmaal.net/ek-deewana-tha-episode-2/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Ek-Deewana-Tha-E2.webp"
     },
     {
       "title": "Malti Episode 6",
       "duration": "32:00",
-      "upload_time": "5 Hr Ago",
+      "upload_time": "11 Hr Ago",
       "link": "https://hmaal.net/malti-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Malti-E6.webp"
     },
     {
       "title": "Taras Episode 1",
       "duration": "21:00",
-      "upload_time": "7 Hr Ago",
+      "upload_time": "13 Hr Ago",
       "link": "https://hmaal.net/taras-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Taras-E1.webp"
     },
     {
       "title": "Dance Bar Episode 5",
       "duration": "20:00",
-      "upload_time": "7 Hr Ago",
+      "upload_time": "14 Hr Ago",
       "link": "https://hmaal.net/dance-bar-episode-5/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Dance-Bar-Episode-5.webp"
     },
     {
       "title": "Malti Episode 4",
       "duration": "29:00",
-      "upload_time": "8 Hr Ago",
+      "upload_time": "14 Hr Ago",
       "link": "https://hmaal.net/malti-episode-4/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Malti-E4.webp"
     },
     {
       "title": "Ek Deewana Tha Episode 6",
       "duration": "29:00",
-      "upload_time": "9 Hr Ago",
+      "upload_time": "15 Hr Ago",
       "link": "https://hmaal.net/ek-deewana-tha-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Ek-Deewana-Tha-Episode-6.webp"
     },
     {
       "title": "Dance Bar Episode 4",
       "duration": "15:00",
-      "upload_time": "10 Hr Ago",
+      "upload_time": "16 Hr Ago",
       "link": "https://hmaal.net/dance-bar-episode-4/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Dance-Bar-Episode-4.webp"
     },
     {
       "title": "Taras Episode 2",
       "duration": "20:00",
-      "upload_time": "10 Hr Ago",
+      "upload_time": "17 Hr Ago",
       "link": "https://hmaal.net/taras-episode-2/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Taras-E2.webp"
     },
     {
       "title": "Dance Bar Episode 3",
       "duration": "17:00",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.net/dance-bar-episode-3/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Dance-Bar-Episode-3.webp"
     },
     {
       "title": "Dance Bar Episode 1",
       "duration": "16:00",
-      "upload_time": "12 Hr Ago",
+      "upload_time": "19 Hr Ago",
       "link": "https://hmaal.net/dance-bar-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Dance-Bar-Episode-1.webp"
     },
     {
       "title": "Jalebi Bai Episode 9",
       "duration": "18:00",
-      "upload_time": "13 Hr Ago",
+      "upload_time": "20 Hr Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-9/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-9.webp"
     },
     {
       "title": "Kya Khoob Lagti Ho Episode 5",
       "duration": "27:00",
-      "upload_time": "14 Hr Ago",
+      "upload_time": "20 Hr Ago",
       "link": "https://hmaal.net/kya-khoob-lagti-ho-episode-5/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kya-Khoob-Lagti-Ho-Episode-5.webp"
     },
     {
       "title": "Jalebi Bai Episode 7",
       "duration": "19:00",
-      "upload_time": "15 Hr Ago",
+      "upload_time": "21 Hr Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-7/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-7.webp"
     },
     {
       "title": "Kya Khoob Lagti Ho Episode 2",
       "duration": "22:00",
-      "upload_time": "17 Hr Ago",
+      "upload_time": "23 Hr Ago",
       "link": "https://hmaal.net/kya-khoob-lagti-ho-episode-2/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kya-Khoob-Lagti-Ho-Episode-2.webp"
     },
     {
       "title": "Dil To Baccha Hai Episode 5",
       "duration": "21:00",
-      "upload_time": "17 Hr Ago",
+      "upload_time": "23 Hr Ago",
       "link": "https://hmaal.net/dil-to-baccha-hai-episode-5/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Dil-To-Baccha-Hai-Episode-5.webp"
     },
     {
       "title": "Jalebi Bai Episode 8",
       "duration": "18:00",
-      "upload_time": "18 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-8/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-8.webp"
     },
     {
       "title": "Kya Khoob Lagti Ho Episode 6",
       "duration": "20:00",
-      "upload_time": "22 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.net/kya-khoob-lagti-ho-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kya-Khoob-Lagti-Ho-Episode-6.webp"
     },
     {
       "title": "Kya Khoob Lagti Ho Episode 1",
       "duration": "28:00",
-      "upload_time": "23 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.net/kya-khoob-lagti-ho-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kya-Khoob-Lagti-Ho-Episode-1.webp"
     },
@@ -186,20 +214,6 @@
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Ek-Baar-Aur-Episode-5.webp"
     },
     {
-      "title": "Ek Baar Aur Episode 6",
-      "duration": "30:00",
-      "upload_time": "1 Dy Ago",
-      "link": "https://hmaal.net/ek-baar-aur-episode-6/",
-      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Ek-Baar-Aur-Episode-6.webp"
-    },
-    {
-      "title": "Shaukiya Episode 6",
-      "duration": "27:00",
-      "upload_time": "1 Dy Ago",
-      "link": "https://hmaal.net/shaukiya-episode-6/",
-      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Shaukiya-Episode-6.webp"
-    },
-    {
       "title": "Shaukiya Episode 4",
       "duration": "23:00",
       "upload_time": "1 Dy Ago",
@@ -214,51 +228,58 @@
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Dil-To-Baccha-Hai-Episode-4.webp"
     },
     {
+      "title": "Shaukiya Episode 2",
+      "duration": "20:00",
+      "upload_time": "2 Dy Ago",
+      "link": "https://hmaal.net/shaukiya-episode-2/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Shaukiya-Episode-2.webp"
+    },
+    {
       "title": "Dil To Baccha Hai Episode 6",
       "duration": "19:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/dil-to-baccha-hai-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Dil-To-Baccha-Hai-Episode-6.webp"
     },
     {
       "title": "Kya Khoob Lagti Ho Episode 3",
       "duration": "27:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/kya-khoob-lagti-ho-episode-3/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kya-Khoob-Lagti-Ho-Episode-3.webp"
     },
     {
       "title": "Shaukiya Episode 3",
       "duration": "29:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/shaukiya-episode-3/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Shaukiya-Episode-3.webp"
     },
     {
       "title": "Kya Khoob Lagti Ho Episode 4",
       "duration": "24:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/kya-khoob-lagti-ho-episode-4/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kya-Khoob-Lagti-Ho-Episode-4.webp"
     },
     {
       "title": "Shaukiya Episode 1",
       "duration": "21:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/shaukiya-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Shaukiya-Episode-1.webp"
     },
     {
       "title": "Jalebi Bai Episode 6",
       "duration": "21:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-6.webp"
     },
     {
       "title": "Shaukiya Episode 5",
       "duration": "22:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.net/shaukiya-episode-5/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Shaukiya-Episode-5.webp"
     },
@@ -328,56 +349,56 @@
     {
       "title": "Dil To Baccha Hai Episode 2",
       "duration": "23:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/dil-to-baccha-hai-episode-2/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Dil-To-Baccha-Hai-Episode-2-New.webp"
     },
     {
       "title": "Dil To Baccha Hai Episode 1",
       "duration": "19:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/dil-to-baccha-hai-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/12/Dil-To-Baccha-Hai-Episode-1.webp"
     },
     {
       "title": "Utha Le Jaunga Episode 6",
       "duration": "26:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/utha-le-jaunga-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/01/Utha-Le-Jaunga-Episode-6.webp"
     },
     {
       "title": "Utha Le Jaunga Episode 7",
       "duration": "25:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/utha-le-jaunga-episode-7/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/01/Utha-Le-Jaunga-Episode-7.webp"
     },
     {
       "title": "Balam Pichkari Episode 6",
       "duration": "24:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/balam-pichkari-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/02/Balam-Pichkari-Episode-6.webp"
     },
     {
       "title": "Utha Le Jaunga Episode 5",
       "duration": "23:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/utha-le-jaunga-episode-5/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/01/Utha-Le-Jaunga-Episode-5.webp"
     },
     {
       "title": "Balam Pichkari Episode 7",
       "duration": "19:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/balam-pichkari-episode-7/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/02/Balam-Pichkari-Episode-7.webp"
     },
     {
       "title": "Balam Pichkari Episode 3",
       "duration": "20:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.net/balam-pichkari-episode-3/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/02/Balam-Pichkari-Episode-3.webp"
     },
@@ -391,37 +412,30 @@
     {
       "title": "Jalebi Bai Episode 1",
       "duration": "20:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-10.webp"
     },
     {
       "title": "Jalebi Bai Episode 5",
       "duration": "19:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-5/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-5.webp"
     },
     {
       "title": "Jalebi Bai Episode 4",
       "duration": "19:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-4/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-4.webp"
     },
     {
       "title": "Jalebi Bai Episode 3",
       "duration": "19:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.net/jalebi-bai-episode-3/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Jalebi-Bai-Episode-3.webp"
-    },
-    {
-      "title": "Chaashni Episode 3",
-      "duration": "27:00",
-      "upload_time": "2 Wk Ago",
-      "link": "https://hmaal.net/chaashni-episode-3/",
-      "thumbnail": "https://hmaal.net/wp-content/uploads/2025/03/Chaashni-Episode-3.webp"
     },
     {
       "title": "Chaashni Episode 3",
@@ -748,21 +762,21 @@
     {
       "title": "Kaamwali Bai Episode 2",
       "duration": "19:00",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.net/kaamwali-bai-episode-2/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Kaamwali-Bai-Episode-2.webp"
     },
     {
       "title": "De De Pyaar De Dost Episode 2",
       "duration": "25:00",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.net/de-de-pyaar-de-dost-episode-2/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/06/De-De-Pyaar-De-Dost-Episode-2.webp"
     },
     {
       "title": "De De Pyaar De Dost Episode 1",
       "duration": "27:00",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.net/de-de-pyaar-de-dost-episode-1/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2025/06/De-De-Pyaar-De-Dost-Episode-1.webp"
     },
@@ -1264,6 +1278,27 @@
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Rain-Basera-Episode-4.webp"
     },
     {
+      "title": "Rain Basera Episode 7",
+      "duration": "22:00",
+      "upload_time": "1 Mo Ago",
+      "link": "https://hmaal.net/rain-basera-episode-7/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Rain-Basera-Episode-7.webp"
+    },
+    {
+      "title": "Rain Basera Episode 6",
+      "duration": "35:00",
+      "upload_time": "1 Mo Ago",
+      "link": "https://hmaal.net/rain-basera-episode-6/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Rain-Basera-Episode-6.webp"
+    },
+    {
+      "title": "Purani Haveli Episode 1",
+      "duration": "24:00",
+      "upload_time": "1 Mo Ago",
+      "link": "https://hmaal.net/purani-haveli-episode-1/",
+      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Purani-Haveli-Episode-1-1.webp"
+    },
+    {
       "title": "Rain Basera Episode 2",
       "duration": "18:00",
       "upload_time": "1 Mo Ago",
@@ -1451,27 +1486,6 @@
       "upload_time": "1 Mo Ago",
       "link": "https://hmaal.net/tohfa-episode-6/",
       "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Tohfa-Episode-6.webp"
-    },
-    {
-      "title": "Virgin Boys Episode 5",
-      "duration": "15:00",
-      "upload_time": "1 Mo Ago",
-      "link": "https://hmaal.net/virgin-boys-episode-5/",
-      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Virgin-Boys-Episode-5.webp"
-    },
-    {
-      "title": "Bandh Darwaza Episode 5",
-      "duration": "25:00",
-      "upload_time": "1 Mo Ago",
-      "link": "https://hmaal.net/bandh-darwaza-episode-5/",
-      "thumbnail": "https://hmaal.net/wp-content/uploads/2025/09/Bandh-Darwaza-Episode-5.webp"
-    },
-    {
-      "title": "Virgin Boys Episode 6",
-      "duration": "15:00",
-      "upload_time": "1 Mo Ago",
-      "link": "https://hmaal.net/virgin-boys-episode-6/",
-      "thumbnail": "https://hmaal.net/wp-content/uploads/2024/11/Virgin-Boys-Episode-6.webp"
     },
     {
       "title": "Virgin Boys Episode 5",

@@ -1,145 +1,236 @@
 {
   "source": "https://hmaal.net/ott/ullu/",
-  "created_at": "2026-05-29T20:34:25.497278",
-  "total": 1169,
+  "created_at": "2026-05-30T03:59:49.817395",
+  "total": 1182,
   "episodes": [
+    {
+      "title": "Lady Finger Episode 2",
+      "duration": "",
+      "upload_time": "30 Mnutes Ago",
+      "link": "https://hmaal.com.co/lady-finger-episode-2/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Lady-Finger-Episode-2.webp"
+    },
+    {
+      "title": "Ansh Episode 3",
+      "duration": "20:00",
+      "upload_time": "54 Mnutes Ago",
+      "link": "https://hmaal.com.co/ansh-episode-3/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Ansh-Episode-3.webp"
+    },
+    {
+      "title": "Laila Episode 2",
+      "duration": "",
+      "upload_time": "1 Hr Ago",
+      "link": "https://hmaal.com.co/laila-episode-2/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Laila-Episode-2.webp"
+    },
+    {
+      "title": "Lady Finger Episode 4",
+      "duration": "",
+      "upload_time": "1 Hr Ago",
+      "link": "https://hmaal.com.co/lady-finger-episode-4/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Lady-Finger-Episode-4.webp"
+    },
+    {
+      "title": "Jaal Episode 2",
+      "duration": "19:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.com.co/jaal-episode-2/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Jaal-Episode-2.webp"
+    },
+    {
+      "title": "Laila Episode 6",
+      "duration": "",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.com.co/laila-episode-6/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Laila-Episode-6.webp"
+    },
+    {
+      "title": "Ansh Episode 4",
+      "duration": "24:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.com.co/ansh-episode-4/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Ansh-Episode-4.webp"
+    },
+    {
+      "title": "Tapan Episode 4",
+      "duration": "24:00",
+      "upload_time": "3 Hr Ago",
+      "link": "https://hmaal.com.co/tapan-episode-4/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Tapan-Episode-4.webp"
+    },
+    {
+      "title": "Laila Episode 5",
+      "duration": "",
+      "upload_time": "3 Hr Ago",
+      "link": "https://hmaal.com.co/laila-episode-5/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Laila-Episode-5.webp"
+    },
+    {
+      "title": "Tapan Episode 1",
+      "duration": "21:00",
+      "upload_time": "3 Hr Ago",
+      "link": "https://hmaal.com.co/tapan-episode-1/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Tapan-Episode-1.webp"
+    },
+    {
+      "title": "Jaal Episode 1",
+      "duration": "23:00",
+      "upload_time": "4 Hr Ago",
+      "link": "https://hmaal.com.co/jaal-episode-1/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Jaal-Episode-1.webp"
+    },
+    {
+      "title": "Tapan Episode 2",
+      "duration": "25:00",
+      "upload_time": "6 Hr Ago",
+      "link": "https://hmaal.com.co/tapan-episode-2/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Tapan-Episode-2.webp"
+    },
+    {
+      "title": "Ansh Episode 6",
+      "duration": "17:00",
+      "upload_time": "6 Hr Ago",
+      "link": "https://hmaal.com.co/ansh-episode-6/",
+      "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/03/Ansh-Episode-6.webp"
+    },
     {
       "title": "Daal Chawal Episode 7",
       "duration": "",
-      "upload_time": "3 Hr Ago",
+      "upload_time": "10 Hr Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-7/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-7-1.webp"
     },
     {
       "title": "Lag Ja Gale Episode 7",
       "duration": "20:00",
-      "upload_time": "4 Hr Ago",
+      "upload_time": "11 Hr Ago",
       "link": "https://hmaal.com.co/lag-ja-gale-episode-7/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Lag-Ja-Gale-Episode-7-1.webp"
     },
     {
       "title": "Daal Chawal Episode 4",
       "duration": "19:00",
-      "upload_time": "8 Hr Ago",
+      "upload_time": "15 Hr Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-4.webp"
     },
     {
       "title": "Shatir Episode 7",
       "duration": "",
-      "upload_time": "10 Hr Ago",
+      "upload_time": "17 Hr Ago",
       "link": "https://hmaal.com.co/shatir-episode-7/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Shatir-Episode-7.webp"
     },
     {
       "title": "Lag Ja Gale Episode 4",
       "duration": "19:00",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.com.co/lag-ja-gale-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Lag-Ja-Gale-Episode-4.webp"
     },
     {
       "title": "Shatir Episode 6",
       "duration": "",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.com.co/shatir-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Shatir-Episode-6.webp"
     },
     {
       "title": "Daal Chawal Episode 6",
       "duration": "",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-6-1.webp"
     },
     {
       "title": "Daal Chawal Episode 1",
       "duration": "21:00",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-1/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-1.webp"
     },
     {
       "title": "Daal Chawal Episode 3",
       "duration": "19:00",
-      "upload_time": "13 Hr Ago",
+      "upload_time": "20 Hr Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-3/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-3.webp"
     },
     {
       "title": "Shatir Episode 4",
       "duration": "",
-      "upload_time": "14 Hr Ago",
+      "upload_time": "21 Hr Ago",
       "link": "https://hmaal.com.co/shatir-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Shatir-Episode-4.webp"
     },
     {
       "title": "Shatir Episode 5",
       "duration": "",
-      "upload_time": "15 Hr Ago",
+      "upload_time": "22 Hr Ago",
       "link": "https://hmaal.com.co/shatir-episode-5/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Shatir-Episode-5.webp"
     },
     {
       "title": "Lag Ja Gale Episode 1",
       "duration": "",
-      "upload_time": "15 Hr Ago",
+      "upload_time": "22 Hr Ago",
       "link": "https://hmaal.com.co/lag-ja-gale-episode-1/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Lag-Ja-Gale-Episode-1.webp"
     },
     {
       "title": "Lag Ja Gale Episode 6",
       "duration": "21:00",
-      "upload_time": "16 Hr Ago",
+      "upload_time": "23 Hr Ago",
       "link": "https://hmaal.com.co/lag-ja-gale-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Lag-Ja-Gale-Episode-6-1.webp"
     },
     {
       "title": "Shatir Episode 3",
       "duration": "",
-      "upload_time": "17 Hr Ago",
+      "upload_time": "24 Hr Ago",
       "link": "https://hmaal.com.co/shatir-episode-3/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Shatir-Episode-3.webp"
     },
     {
       "title": "Daal Chawal Episode 2",
       "duration": "21:00",
-      "upload_time": "17 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-2.webp"
     },
     {
       "title": "Shatir Episode 2",
       "duration": "",
-      "upload_time": "18 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.com.co/shatir-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Shatir-Episode-2.webp"
     },
     {
       "title": "Daal Chawal Episode 5",
       "duration": "",
-      "upload_time": "18 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.com.co/daal-chawal-episode-5/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Daal-Chawal-Episode-5.webp"
     },
     {
       "title": "Jaal Episode 6",
       "duration": "15:00",
-      "upload_time": "20 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.com.co/jaal-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Jaal-Episode-6.webp"
     },
     {
       "title": "Lag Ja Gale Episode 5",
       "duration": "21:00",
-      "upload_time": "22 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.com.co/lag-ja-gale-episode-5/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Lag-Ja-Gale-Episode-5.webp"
     },
     {
       "title": "Lag Ja Gale Episode 2",
       "duration": "26:00",
-      "upload_time": "23 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.com.co/lag-ja-gale-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/02/Lag-Ja-Gale-Episode-2.webp"
     },
@@ -167,21 +258,21 @@
     {
       "title": "Ankhiyon Se Goli Maare Episode 5",
       "duration": "25:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.com.co/ankhiyon-se-goli-maare-episode-5/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/04/Ankhiyon-Se-Goli-Maare-Episode-5.webp"
     },
     {
       "title": "Ankhiyon Se Goli Maare Episode 1",
       "duration": "30:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.com.co/ankhiyon-se-goli-maare-episode-1/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/04/Ankhiyon-Se-Goli-Maare-Episode-1.webp"
     },
     {
       "title": "Ankhiyon Se Goli Maare Episode 7",
       "duration": "26:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.com.co/ankhiyon-se-goli-maare-episode-7/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/04/Ankhiyon-Se-Goli-Maare-Episode-7-1.webp"
     },
@@ -258,28 +349,28 @@
     {
       "title": "Bade Achhe Lagte Hai Episode 4",
       "duration": "",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.com.co/bade-achhe-lagte-hai-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/06/Bade-Achhe-Lagte-Hai-Episode-4.webp"
     },
     {
       "title": "Haseena Maan Jayegi Episode 8",
       "duration": "",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.com.co/haseena-maan-jayegi-episode-8/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/06/Haseena-Maan-Jayegi-Episode-8.webp"
     },
     {
       "title": "Besharam Episode 5",
       "duration": "",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.com.co/besharam-episode-5/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/05/Besharam-Episode-5.webp"
     },
     {
       "title": "Bade Achhe Lagte Hai Episode 1",
       "duration": "",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.com.co/bade-achhe-lagte-hai-episode-1/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/06/Bade-Achhe-Lagte-Hai-Episode-1.webp"
     },
@@ -958,28 +1049,28 @@
     {
       "title": "Tadka Episode 4",
       "duration": "",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.com.co/tadka-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/07/Tadka-Episode-4.webp"
     },
     {
       "title": "Tadka Episode 6",
       "duration": "",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.com.co/tadka-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/07/Tadka-Episode-6.webp"
     },
     {
       "title": "The Bucket List Episode 2",
       "duration": "22:00",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.com.co/the-bucket-list-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/The-Bucket-List-Episode-2.webp"
     },
     {
       "title": "Tawa Garam Episode 4",
       "duration": "27:00",
-      "upload_time": "2 Wk Ago",
+      "upload_time": "3 Wk Ago",
       "link": "https://hmaal.com.co/tawa-garam-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Tawa-Garam-Episode-4.webp"
     },
@@ -1938,77 +2029,77 @@
     {
       "title": "Riti Riwaj Tijarat Episode 1",
       "duration": "22:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/riti-riwaj-tijarat-episode-1/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Riti-Riwaj-Tijarat-Episode-1.webp"
     },
     {
       "title": "Revenge Episode 1",
       "duration": "27:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/revenge-episode-1/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Revenge-Episode-1.webp"
     },
     {
       "title": "Relationship Counsellor Episode 2",
       "duration": "23:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/relationship-counsellor-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Relationship-Counsellor-Episode-2.webp"
     },
     {
       "title": "Raat Baaki Hai Episode 3",
       "duration": "26:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/raat-baaki-hai-episode-3/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Raat-Baaki-Hai-Episode-3.webp"
     },
     {
       "title": "Happy Ending Episode 3",
       "duration": "26:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/happy-ending-episode-3/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2025/07/Happy-Ending-Episode-3-1-1.webp"
     },
     {
       "title": "Revenge Episode 2",
       "duration": "25:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/revenge-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Revenge-Episode-2.webp"
     },
     {
       "title": "Revenge Episode 3",
       "duration": "26:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/revenge-episode-3/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Revenge-Episode-3.webp"
     },
     {
       "title": "Raat Baaki Hai Episode 4",
       "duration": "23:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/raat-baaki-hai-episode-4/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Raat-Baaki-Hai-Episode-4.webp"
     },
     {
       "title": "Riti Riwaj Tijarat Episode 2",
       "duration": "24:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/riti-riwaj-tijarat-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Riti-Riwaj-Tijarat-Episode-2.webp"
     },
     {
       "title": "Raat Baaki Hai Episode 2",
       "duration": "27:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/raat-baaki-hai-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Raat-Baaki-Hai-Episode-2.webp"
     },
     {
       "title": "Red Light Episode 6",
       "duration": "21:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.com.co/red-light-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Red-Light-Episode-6.webp"
     },
@@ -4682,35 +4773,35 @@
     {
       "title": "Dubey Ji And The Boys Episode 3",
       "duration": "24:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.com.co/dubey-ji-and-the-boys-episode-3/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Dubey-Ji-And-The-Boys-Episode-3.webp"
     },
     {
       "title": "Gaon Ki Garmi 4 Episode 7",
       "duration": "18:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.com.co/gaon-ki-garmi-4-episode-7/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Gaon-Ki-Garmi-4-Episode-7.webp"
     },
     {
       "title": "Dishkiyaoon Episode 2",
       "duration": "23:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.com.co/dishkiyaoon-episode-2/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Dishkiyaoon-Episode-2.webp"
     },
     {
       "title": "Dishkiyaoon Episode 5",
       "duration": "24:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.com.co/dishkiyaoon-episode-5/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Dishkiyaoon-Episode-5.webp"
     },
     {
       "title": "Dil Sambhal Ja Zara Episode 6",
       "duration": "26:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.com.co/dil-sambhal-ja-zara-episode-6/",
       "thumbnail": "https://hmaal.com.co/wp-content/uploads/2024/11/Dil-Sambhal-Ja-Zara-Episode-6.webp"
     },

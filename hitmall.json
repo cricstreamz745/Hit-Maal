@@ -1,236 +1,313 @@
 {
   "source": "https://hmaal.net/ott/ullu/",
-  "created_at": "2026-06-06T19:40:04.677992",
-  "total": 1365,
+  "created_at": "2026-06-07T04:40:23.122373",
+  "total": 1376,
   "episodes": [
+    {
+      "title": "Mithai Wali Episode 6",
+      "duration": "",
+      "upload_time": "22 Mnutes Ago",
+      "link": "https://hmaal.co/mithai-wali-episode-6/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mithai-Wali-Episode-6.webp"
+    },
+    {
+      "title": "Chuski Episode 6",
+      "duration": "16:00",
+      "upload_time": "27 Mnutes Ago",
+      "link": "https://hmaal.co/chuski-episode-6/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chuski-Episode-6.webp"
+    },
+    {
+      "title": "Mithai Wali Episode 3",
+      "duration": "20:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.co/mithai-wali-episode-3/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mithai-Wali-Episode-3.webp"
+    },
+    {
+      "title": "Cheese Cake Episode 3",
+      "duration": "23:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.co/cheese-cake-episode-3/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Cheese-Cake-Episode-3.webp"
+    },
+    {
+      "title": "Call Center Episode 4",
+      "duration": "15:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.co/call-center-episode-4/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Call-Center-Episode-4.webp"
+    },
+    {
+      "title": "Chuski Episode 2",
+      "duration": "25:00",
+      "upload_time": "2 Hr Ago",
+      "link": "https://hmaal.co/chuski-episode-2/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chuski-Episode-2.webp"
+    },
+    {
+      "title": "Mithai Wali Episode 2",
+      "duration": "22:00",
+      "upload_time": "4 Hr Ago",
+      "link": "https://hmaal.co/mithai-wali-episode-2/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mithai-Wali-Episode-2.webp"
+    },
+    {
+      "title": "Mithai Wali Episode 5",
+      "duration": "26:00",
+      "upload_time": "5 Hr Ago",
+      "link": "https://hmaal.co/mithai-wali-episode-5/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mithai-Wali-Episode-5.webp"
+    },
+    {
+      "title": "Cheese Cake Episode 2",
+      "duration": "29:00",
+      "upload_time": "6 Hr Ago",
+      "link": "https://hmaal.co/cheese-cake-episode-2/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Cheese-Cake-Episode-2.webp"
+    },
+    {
+      "title": "Cheese Cake Episode 5",
+      "duration": "26:00",
+      "upload_time": "7 Hr Ago",
+      "link": "https://hmaal.co/cheese-cake-episode-5/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Cheese-Cake-Episode-5.webp"
+    },
+    {
+      "title": "Chuski Episode 4",
+      "duration": "32:00",
+      "upload_time": "8 Hr Ago",
+      "link": "https://hmaal.co/chuski-episode-4/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chuski-Episode-4.webp"
+    },
+    {
+      "title": "Chuski Episode 1",
+      "duration": "27:00",
+      "upload_time": "9 Hr Ago",
+      "link": "https://hmaal.co/chuski-episode-1/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chuski-Episode-1.webp"
+    },
     {
       "title": "Guardian Episode 2",
       "duration": "10:00",
-      "upload_time": "39 Mnutes Ago",
+      "upload_time": "11 Hr Ago",
       "link": "https://hmaal.co/guardian-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Guardian-Episode-2.webp"
     },
     {
       "title": "Guardian Episode 3",
       "duration": "9:00",
-      "upload_time": "4 Hr Ago",
+      "upload_time": "14 Hr Ago",
       "link": "https://hmaal.co/guardian-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Guardian-Episode-3.webp"
     },
     {
       "title": "Chawl House Episode 2",
       "duration": "18:00",
-      "upload_time": "4 Hr Ago",
+      "upload_time": "14 Hr Ago",
       "link": "https://hmaal.co/chawl-house-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chawl-House-Episode-2.webp"
     },
     {
       "title": "Innocent Episode 3",
       "duration": "17:00",
-      "upload_time": "4 Hr Ago",
+      "upload_time": "14 Hr Ago",
       "link": "https://hmaal.co/innocent-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Innocent-Episode-3.webp"
     },
     {
       "title": "Imli Episode 2",
       "duration": "25:00",
-      "upload_time": "5 Hr Ago",
+      "upload_time": "15 Hr Ago",
       "link": "https://hmaal.co/imli-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Imli-Episode-2.webp"
     },
     {
       "title": "Chahat Episode 3",
       "duration": "25:00",
-      "upload_time": "6 Hr Ago",
+      "upload_time": "16 Hr Ago",
       "link": "https://hmaal.co/chahat-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chahat-Episode-3.webp"
     },
     {
       "title": "Chahat Episode 5",
       "duration": "28:00",
-      "upload_time": "6 Hr Ago",
+      "upload_time": "16 Hr Ago",
       "link": "https://hmaal.co/chahat-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chahat-Episode-5.webp"
     },
     {
       "title": "Chahat Episode 2",
       "duration": "25:00",
-      "upload_time": "6 Hr Ago",
+      "upload_time": "16 Hr Ago",
       "link": "https://hmaal.co/chahat-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chahat-Episode-2.webp"
     },
     {
       "title": "Innocent Episode 6",
       "duration": "17:00",
-      "upload_time": "8 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.co/innocent-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Innocent-Episode-6.webp"
     },
     {
       "title": "Imli Episode 5",
       "duration": "26:00",
-      "upload_time": "8 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.co/imli-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Imli-Episode-5.webp"
     },
     {
       "title": "Innocent Episode 4",
       "duration": "17:00",
-      "upload_time": "8 Hr Ago",
+      "upload_time": "18 Hr Ago",
       "link": "https://hmaal.co/innocent-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Innocent-Episode-4.webp"
     },
     {
       "title": "Chahat Episode 1",
       "duration": "27:00",
-      "upload_time": "9 Hr Ago",
+      "upload_time": "19 Hr Ago",
       "link": "https://hmaal.co/chahat-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chahat-Episode-1.webp"
     },
     {
       "title": "Chahat Episode 6",
       "duration": "25:00",
-      "upload_time": "10 Hr Ago",
+      "upload_time": "20 Hr Ago",
       "link": "https://hmaal.co/chahat-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chahat-Episode-6.webp"
     },
     {
       "title": "Guardian Episode 1",
       "duration": "10:00",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "21 Hr Ago",
       "link": "https://hmaal.co/guardian-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Guardian-Episode-1.webp"
     },
     {
       "title": "Chawl House Episode 1",
       "duration": "21:00",
-      "upload_time": "11 Hr Ago",
+      "upload_time": "21 Hr Ago",
       "link": "https://hmaal.co/chawl-house-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chawl-House-Episode-1.webp"
     },
     {
       "title": "Chahat Episode 4",
       "duration": "24:00",
-      "upload_time": "14 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/chahat-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chahat-Episode-4.webp"
     },
     {
       "title": "Imli Episode 1",
       "duration": "29:00",
-      "upload_time": "16 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/imli-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Imli-Episode-1.webp"
     },
     {
       "title": "Imli Episode 3",
       "duration": "17:00",
-      "upload_time": "18 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/imli-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Imli-Episode-3.webp"
     },
     {
       "title": "Innocent Episode 1",
       "duration": "17:00",
-      "upload_time": "19 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/innocent-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Innocent-Episode-1.webp"
     },
     {
       "title": "Imli Episode 4",
       "duration": "28:00",
-      "upload_time": "20 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/imli-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Imli-Episode-4.webp"
     },
     {
       "title": "Innocent Episode 5",
       "duration": "15:00",
-      "upload_time": "21 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/innocent-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Innocent-Episode-5.webp"
     },
     {
       "title": "Imli Episode 6",
       "duration": "19:00",
-      "upload_time": "23 Hr Ago",
+      "upload_time": "1 Dy Ago",
       "link": "https://hmaal.co/imli-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Imli-Episode-6.webp"
     },
     {
       "title": "Chawl House 3 Episode 3",
       "duration": "19:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chawl-house-3-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chawl-House-3-Episode-3.webp"
     },
     {
       "title": "Chehraa Episode 2",
       "duration": "19:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chehraa-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chehraa-Episode-2.webp"
     },
     {
       "title": "Chehraa Episode 6",
       "duration": "19:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chehraa-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chehraa-Episode-6.webp"
     },
     {
       "title": "Kaneez Episode 9",
       "duration": "21:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/kaneez-episode-9/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Kaneez-Episode-9.webp"
     },
     {
       "title": "Kaneez Episode 1",
       "duration": "",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/kaneez-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Kaneez-Episode-1.webp"
     },
     {
       "title": "Chehraa Episode 5",
       "duration": "24:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chehraa-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chehraa-Episode-5.webp"
     },
     {
       "title": "Chawl House 2 Episode 2",
       "duration": "22:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chawl-house-2-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chawl-House-2-Episode-2.webp"
     },
     {
       "title": "Chehraa Episode 3",
       "duration": "16:00",
-      "upload_time": "1 Dy Ago",
-      "link": "https://hmaal.co/chehraa-episode-3/",
-      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chehraa-Episode-3.webp"
-    },
-    {
-      "title": "Chehraa Episode 3",
-      "duration": "16:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chehraa-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chehraa-Episode-3.webp"
     },
     {
       "title": "Chawl House 3 Episode 1",
       "duration": "22:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chawl-house-3-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chawl-House-3-Episode-1.webp"
     },
     {
       "title": "Chehraa Episode 1",
       "duration": "21:00",
-      "upload_time": "1 Dy Ago",
+      "upload_time": "2 Dy Ago",
       "link": "https://hmaal.co/chehraa-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Chehraa-Episode-1.webp"
     },
@@ -363,49 +440,49 @@
     {
       "title": "Mere Angane Mein Episode 4",
       "duration": "21:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/mere-angane-mein-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mere-Angane-Mein-Episode-4.webp"
     },
     {
       "title": "Dekho Magar Pyar Se Episode 2",
       "duration": "28:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/dekho-magar-pyar-se-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Dekho-Magar-Pyar-Se-Episode-2.webp"
     },
     {
       "title": "Mere Angane Mein Episode 6",
       "duration": "",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/mere-angane-mein-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mere-Angane-Mein-Episode-6.webp"
     },
     {
       "title": "D Code Episode 3",
       "duration": "20:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/d-code-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/D-Code-Episode-3.webp"
     },
     {
       "title": "Mere Angane Mein Episode 7",
       "duration": "",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/mere-angane-mein-episode-7/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Mere-Angane-Mein-Episode-7.webp"
     },
     {
       "title": "Dekho Magar Pyar Se Episode 3",
       "duration": "22:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/dekho-magar-pyar-se-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/01/Dekho-Magar-Pyar-Se-Episode-3.webp"
     },
     {
       "title": "Choked Episode 1",
       "duration": "21:00",
-      "upload_time": "2 Dy Ago",
+      "upload_time": "3 Dy Ago",
       "link": "https://hmaal.co/choked-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Choked-Episode-1.webp"
     },
@@ -517,70 +594,70 @@
     {
       "title": "Devar Ji Episode 3",
       "duration": "17:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/devar-ji-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Devar-Ji-Episode-3.webp"
     },
     {
       "title": "Devil Episode 4",
       "duration": "25:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/devil-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Devil-Episode-4.webp"
     },
     {
       "title": "Devil Episode 3",
       "duration": "26:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/devil-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Devil-Episode-3.webp"
     },
     {
       "title": "Cyanide Episode 3",
       "duration": "14:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/cyanide-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Cyanide-Episode-3.webp"
     },
     {
       "title": "Corporate Episode 6",
       "duration": "22:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/corporate-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Corporate-Episode-6.webp"
     },
     {
       "title": "Corporate Episode 7",
       "duration": "20:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/corporate-episode-7/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Corporate-Episode-7.webp"
     },
     {
       "title": "Devil Episode 6",
       "duration": "24:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/devil-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Devil-Episode-6.webp"
     },
     {
       "title": "Devil Episode 1",
       "duration": "25:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/devil-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Devil-Episode-1.webp"
     },
     {
       "title": "Cyanide Episode 2",
       "duration": "17:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/cyanide-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Cyanide-Episode-2.webp"
     },
     {
       "title": "Devar Ji Episode 4",
       "duration": "25:00",
-      "upload_time": "3 Dy Ago",
+      "upload_time": "4 Dy Ago",
       "link": "https://hmaal.co/devar-ji-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Devar-Ji-Episode-4.webp"
     },
@@ -678,91 +755,91 @@
     {
       "title": "Estate Manager Episode 1",
       "duration": "23:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/estate-manager-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Estate-Manager-Episode-1.webp"
     },
     {
       "title": "Estate Manager Episode 7",
       "duration": "23:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/estate-manager-episode-7/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Estate-Manager-Episode-7.webp"
     },
     {
       "title": "Halala Episode 11",
       "duration": "14:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/halala-episode-11/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Halala-Episode-11.webp"
     },
     {
       "title": "Estate Manager Episode 6",
       "duration": "23:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/estate-manager-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Estate-Manager-Episode-6.webp"
     },
     {
       "title": "Halala Episode 3",
       "duration": "21:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/halala-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Halala-Episode-3.webp"
     },
     {
       "title": "Halala Episode 6",
       "duration": "24:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/halala-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Halala-Episode-6.webp"
     },
     {
       "title": "Estate Manager Episode 2",
       "duration": "26:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/estate-manager-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Estate-Manager-Episode-2.webp"
     },
     {
       "title": "Dekhi Andekhi Episode 2",
       "duration": "25:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/dekhi-andekhi-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Dekhi-Andekhi-Episode-2.webp"
     },
     {
       "title": "Estate Manager Episode 4",
       "duration": "26:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/estate-manager-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Estate-Manager-Episode-4.webp"
     },
     {
       "title": "Estate Manager Episode 3",
       "duration": "17:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/estate-manager-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Estate-Manager-Episode-3.webp"
     },
     {
       "title": "Halala Episode 9",
       "duration": "23:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/halala-episode-9/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Halala-Episode-9.webp"
     },
     {
       "title": "Dekhi Andekhi Episode 6",
       "duration": "22:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/dekhi-andekhi-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Dekhi-Andekhi-Episode-6.webp"
     },
     {
       "title": "Dekhi Andekhi Episode 1",
       "duration": "19:00",
-      "upload_time": "4 Dy Ago",
+      "upload_time": "5 Dy Ago",
       "link": "https://hmaal.co/dekhi-andekhi-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Dekhi-Andekhi-Episode-1.webp"
     },
@@ -844,6 +921,13 @@
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Halala-Episode-7.webp"
     },
     {
+      "title": "Halala Episode 1",
+      "duration": "17:00",
+      "upload_time": "5 Dy Ago",
+      "link": "https://hmaal.co/halala-episode-1/",
+      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Halala-Episode-11-1.webp"
+    },
+    {
       "title": "Exit Episode 1",
       "duration": "44:00",
       "upload_time": "5 Dy Ago",
@@ -874,63 +958,63 @@
     {
       "title": "Exit Episode 5",
       "duration": "18:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/exit-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Exit-Episode-5.webp"
     },
     {
       "title": "Exit Episode 6",
       "duration": "18:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/exit-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Exit-Episode-6.webp"
     },
     {
       "title": "Fatherhood Episode 1",
       "duration": "18:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/fatherhood-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Fatherhood-Episode-1.webp"
     },
     {
       "title": "Exit Episode 2",
       "duration": "42:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/exit-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Exit-Episode-2.webp"
     },
     {
       "title": "Farebi Yaar Episode 2",
       "duration": "20:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/farebi-yaar-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Farebi-Yaar-Episode-2.webp"
     },
     {
       "title": "Farebi Yaar Episode 1",
       "duration": "21:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/farebi-yaar-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Farebi-Yaar-Episode-1.webp"
     },
     {
       "title": "Exit Episode 9",
       "duration": "19:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/exit-episode-9/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Exit-Episode-9.webp"
     },
     {
       "title": "Dream Girl Episode 4",
       "duration": "25:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/dream-girl-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Dream-Girl-Episode-4.webp"
     },
     {
       "title": "Farebi Yaar Episode 4",
       "duration": "22:00",
-      "upload_time": "5 Dy Ago",
+      "upload_time": "6 Dy Ago",
       "link": "https://hmaal.co/farebi-yaar-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Farebi-Yaar-Episode-4.webp"
     },
@@ -1028,77 +1112,70 @@
     {
       "title": "Farebi Yaar Episode 7",
       "duration": "28:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/farebi-yaar-episode-7/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Farebi-Yaar-Episode-7.webp"
     },
     {
       "title": "Haveli Episode 1",
       "duration": "22:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/haveli-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Purani-Haveli-Episode-1.webp"
     },
     {
       "title": "Haveli Episode 3",
       "duration": "23:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/haveli-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Purani-Haveli-Episode-3.webp"
     },
     {
       "title": "Ishqiyapa Episode 1",
       "duration": "28:00",
-      "upload_time": "6 Dy Ago",
-      "link": "https://hmaal.co/ishqiyapa-episode-1/",
-      "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-1.webp"
-    },
-    {
-      "title": "Ishqiyapa Episode 1",
-      "duration": "28:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/ishqiyapa-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-1.webp"
     },
     {
       "title": "Honey Trap Episode 3",
       "duration": "27:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/honey-trap-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Honey-Trap-Episode-3.webp"
     },
     {
       "title": "Ishqiyapa Episode 2",
       "duration": "21:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/ishqiyapa-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-2.webp"
     },
     {
       "title": "Ishqiyapa Episode 4",
       "duration": "22:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/ishqiyapa-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-4.webp"
     },
     {
       "title": "Ishqiyapa Episode 6",
       "duration": "19:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/ishqiyapa-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-6.webp"
     },
     {
       "title": "Haveli Episode 6",
       "duration": "30:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/haveli-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Purani-Haveli-Episode-6.webp"
     },
     {
       "title": "Good Night Episode 1",
       "duration": "36:00",
-      "upload_time": "6 Dy Ago",
+      "upload_time": "7 Dy Ago",
       "link": "https://hmaal.co/good-night-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Good-Night-Episode-1.webp"
     },
@@ -1126,70 +1203,70 @@
     {
       "title": "Honey Trap Episode 4",
       "duration": "29:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/honey-trap-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Honey-Trap-Episode-4.webp"
     },
     {
       "title": "Ishqiyapa Episode 7",
       "duration": "22:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/ishqiyapa-episode-7/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-7.webp"
     },
     {
       "title": "Haveli Episode 5",
       "duration": "27:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/haveli-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Haveli-Episode-5.webp"
     },
     {
       "title": "Good Night Episode 2",
       "duration": "36:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/good-night-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Good-Night-Episode-2.webp"
     },
     {
       "title": "Haveli Episode 8",
       "duration": "18:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/haveli-episode-8/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Haveli-Episode-8.webp"
     },
     {
       "title": "Honey Trap Episode 1",
       "duration": "27:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/honey-trap-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Honey-Trap-Episode-1.webp"
     },
     {
       "title": "Ishqiyapa Episode 3",
       "duration": "20:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/ishqiyapa-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Ishqiyapa-Episode-3.webp"
     },
     {
       "title": "Haveli Episode 4",
       "duration": "25:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/haveli-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Purani-Haveli-Episode-4.webp"
     },
     {
       "title": "Honey Trap Episode 5",
       "duration": "19:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/honey-trap-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Honey-Trap-Episode-5.webp"
     },
     {
       "title": "Honey Trap Episode 2",
       "duration": "26:00",
-      "upload_time": "7 Dy Ago",
+      "upload_time": "1 Wk Ago",
       "link": "https://hmaal.co/honey-trap-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Honey-Trap-Episode-2.webp"
     },
@@ -1630,28 +1707,28 @@
     {
       "title": "Bade Achhe Lagte Hai Episode 4",
       "duration": "",
-      "upload_time": "1 Wk Ago",
+      "upload_time": "2 Wk Ago",
       "link": "https://hmaal.co/bade-achhe-lagte-hai-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/06/Bade-Achhe-Lagte-Hai-Episode-4.webp"
     },
     {
       "title": "Haseena Maan Jayegi Episode 8",
       "duration": "",
-      "upload_time": "1 Wk Ago",
+      "upload_time": "2 Wk Ago",
       "link": "https://hmaal.co/haseena-maan-jayegi-episode-8/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/06/Haseena-Maan-Jayegi-Episode-8.webp"
     },
     {
       "title": "Besharam Episode 5",
       "duration": "",
-      "upload_time": "1 Wk Ago",
+      "upload_time": "2 Wk Ago",
       "link": "https://hmaal.co/besharam-episode-5/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/05/Besharam-Episode-5.webp"
     },
     {
       "title": "Bade Achhe Lagte Hai Episode 1",
       "duration": "",
-      "upload_time": "1 Wk Ago",
+      "upload_time": "2 Wk Ago",
       "link": "https://hmaal.co/bade-achhe-lagte-hai-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/06/Bade-Achhe-Lagte-Hai-Episode-1.webp"
     },
@@ -2162,56 +2239,56 @@
     {
       "title": "Tauba Tauba Episode 1",
       "duration": "23:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/tauba-tauba-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Tauba-Tauba-Episode-1.webp"
     },
     {
       "title": "Raju Ban Gaya Gentleman Episode 1",
       "duration": "29:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/raju-ban-gaya-gentleman-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/07/Raju-Ban-Gaya-Gentleman-Episode-1.webp"
     },
     {
       "title": "The Bucket List Episode 3",
       "duration": "28:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/the-bucket-list-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/The-Bucket-List-Episode-3.webp"
     },
     {
       "title": "Teekhi Chutney Episode 3",
       "duration": "23:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/teekhi-chutney-episode-3/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Teekhi-Chutney-Episode-3.webp"
     },
     {
       "title": "Malai Episode 1",
       "duration": "30:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/malai-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Malai-Episode-1.webp"
     },
     {
       "title": "Malai Episode 2",
       "duration": "27:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/malai-episode-2/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Malai-Episode-2.webp"
     },
     {
       "title": "Teekhi Chutney Episode 1",
       "duration": "25:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/teekhi-chutney-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Teekhi-Chutney-Episode-1.webp"
     },
     {
       "title": "Raju Ban Gaya Gentleman Episode 7",
       "duration": "19:00",
-      "upload_time": "3 Wk Ago",
+      "upload_time": "4 Wk Ago",
       "link": "https://hmaal.co/raju-ban-gaya-gentleman-episode-7/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2025/07/Raju-Ban-Gaya-Gentleman-Episode-7.webp"
     },
@@ -2876,49 +2953,49 @@
     {
       "title": "Siskiyaan 2 Episode 4",
       "duration": "22:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/siskiyaan-2-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Siskiyaan-2-Episode-4.webp"
     },
     {
       "title": "Salahkaar Episode 1",
       "duration": "20:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/salahkaar-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Salahkaar-Episode-1.webp"
     },
     {
       "title": "Anari Episode 6",
       "duration": "20:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/anari-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Anari-Episode-6.webp"
     },
     {
       "title": "Anari Episode 1",
       "duration": "24:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/anari-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Anari-Episode-1.webp"
     },
     {
       "title": "Siskiyaan Episode 1",
       "duration": "28:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/siskiyaan-episode-1/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Siskiyaan-Episode-1.webp"
     },
     {
       "title": "Anari Episode 9",
       "duration": "33:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/anari-episode-9/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Anari-Episode-9.webp"
     },
     {
       "title": "Siskiyaan 2 Episode 6",
       "duration": "17:00",
-      "upload_time": "4 Wk Ago",
+      "upload_time": "1 Mo Ago",
       "link": "https://hmaal.co/siskiyaan-2-episode-6/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Siskiyaan-2-Episode-6.webp"
     },
@@ -4675,28 +4752,28 @@
     {
       "title": "Main Yahan Tu Wahan Episode 9",
       "duration": "20:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.co/main-yahan-tu-wahan-episode-9/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Main-Yahan-Tu-Wahan-Episode-9.webp"
     },
     {
       "title": "Laal Lihaaf Episode 4",
       "duration": "21:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.co/laal-lihaaf-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Laal-Lihaaf-Episode-4.webp"
     },
     {
       "title": "Kasturi Episode 4",
       "duration": "30:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.co/kasturi-episode-4/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Kasturi-Episode-4.webp"
     },
     {
       "title": "Main Yahan Tu Wahan Episode 8",
       "duration": "23:00",
-      "upload_time": "1 Mo Ago",
+      "upload_time": "2 Mo Ago",
       "link": "https://hmaal.co/main-yahan-tu-wahan-episode-8/",
       "thumbnail": "https://hmaal.co/wp-content/uploads/2024/11/Main-Yahan-Tu-Wahan-Episode-8.webp"
     },
